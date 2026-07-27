@@ -178,7 +178,7 @@ strong { color: #fff; font-weight: 600; }
 }
 .hero-name {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(3rem, 8.5vw, 7rem);
+  font-size: clamp(2.25rem, 5vw, 5rem);
   font-weight: 800; line-height: 1.0;
   color: #fff;
   letter-spacing: -0.025em;

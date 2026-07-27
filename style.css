@@ -512,13 +512,18 @@ strong { color: #fff; font-weight: 600; }
   background: var(--surface-2);
 }
 .edu-logo {
-  width: 60px; height: 60px;
+  width: 72px; height: 72px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #006747, #00a36c);
+  background: #006747;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.85rem; font-weight: 800; color: #fff;
-  flex-shrink: 0; letter-spacing: 0.05em;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 6px;
+}
+.edu-logo img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 .edu-right h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; }
 .edu-school { font-size: 0.95rem; color: var(--accent); font-weight: 500; margin-bottom: 0.25rem; }

@@ -496,6 +496,22 @@ strong { color: #fff; font-weight: 600; }
   color: var(--accent); font-size: 0.75rem; top: 1px;
 }
 .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+.project-actions {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
+}
+.project-github-link {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  color: var(--text-dim);
+  font-size: 0.775rem; font-weight: 500;
+  border: 1px solid var(--border);
+  padding: 0.22rem 0.55rem;
+  border-radius: 3px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.project-github-link:hover {
+  color: var(--accent);
+  border-color: rgba(232,160,32,0.3);
+}
 
 /* ── Education ── */
 .education-card {
@@ -512,18 +528,13 @@ strong { color: #fff; font-weight: 600; }
   background: var(--surface-2);
 }
 .edu-logo {
-  width: 72px; height: 72px;
-  border-radius: var(--radius-sm);
-  background: #006747;
-  display: flex; align-items: center; justify-content: center;
+  width: 80px; height: 80px;
   flex-shrink: 0;
-  overflow: hidden;
-  padding: 6px;
+  display: flex; align-items: center; justify-content: center;
 }
 .edu-logo img {
   width: 100%; height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 .edu-right h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; }
 .edu-school { font-size: 0.95rem; color: var(--accent); font-weight: 500; margin-bottom: 0.25rem; }

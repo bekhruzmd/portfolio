@@ -3,18 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23fc1c46'/></svg>" />
-  <title>Bekhruz Mukhammadaliyev</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-  <meta name="description" content="Bekhruz Mukhammadaliyev — software engineer and IT student at USF. Building backend systems, data pipelines, and AI tools." />
+  <meta name="description" content="Bekhruz Mukhammadaliyev - software engineer at USF building backend systems, data pipelines, and AI tools." />
   <meta property="og:title" content="Bekhruz Mukhammadaliyev" />
-  <meta property="og:description" content="Software engineer building backend systems, data pipelines, and AI tools that ship. Tech Lead at GDG at USF. HackUSF 2025 Best Overall." />
+  <meta property="og:description" content="Software engineer building backend systems, data pipelines, and AI tools that ship." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bekhruz Mukhammadaliyev" />
-  <meta name="twitter:description" content="Software engineer building backend systems, data pipelines, and AI tools that ship." />
+  <title>Bekhruz Mukhammadaliyev</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230071e3'/><text x='50' y='72' text-anchor='middle' font-size='56' font-family='system-ui' font-weight='600' fill='white'>B</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,373 +17,385 @@
   <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- Navigation -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-brand">
-        <span class="nav-mark" aria-hidden="true"></span>
-        <span class="nav-wordmark">Bekhruz M.</span>
-      </a>
-      <span class="nav-tagline">Software Engineer &nbsp;&middot;&nbsp; Tampa, FL</span>
-      <div class="nav-right">
-        <a href="#contact" class="cta-pill">Contact</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <a href="#hero" class="nav-logo" aria-label="Bekhruz Mukhammadaliyev, home">BM</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-filled nav-cta">Get in Touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
-    <ul>
+    <ul role="list">
       <li><a href="#about"      class="mobile-link">About</a></li>
-      <li><a href="#skills"     class="mobile-link">Stack</a></li>
+      <li><a href="#skills"     class="mobile-link">Skills</a></li>
       <li><a href="#experience" class="mobile-link">Experience</a></li>
-      <li><a href="#projects"   class="mobile-link">Work</a></li>
-      <li><a href="#education"  class="mobile-link">Education</a></li>
+      <li><a href="#projects"   class="mobile-link">Projects</a></li>
       <li><a href="#contact"    class="mobile-link">Contact</a></li>
     </ul>
   </nav>
 
   <main id="main-content">
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-inner">
+    <!-- Hero -->
+    <section id="hero">
       <div class="hero-text">
-        <p class="hero-kicker">Software Engineer</p>
-        <h1 class="hero-display">
-          <b>BEKHRUZ</b>
-          <span>MUKHAM<br>MADALIYEV</span>
-        </h1>
-        <p class="hero-body">Building backend systems, data pipelines,<br>and AI tools that ship.</p>
-        <a href="#projects" class="cta-pill cta-pill--lg">View Work</a>
-      </div>
-      <div class="hero-sphere" aria-hidden="true">
-        <div class="sphere-inner"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <p class="eyebrow">About</p>
-      <h2 class="heading-lg">WHO<br>I AM</h2>
-      <div class="about-layout">
-        <div class="about-body reveal">
-          <p>I'm a software engineer and IT student at the University of South Florida, expected to graduate August 2027. I build backend systems, data pipelines, and AI-powered tools that solve real problems.</p>
-          <p>Currently Tech Lead at Google Developer Group at USF, guiding students through their first software projects and exploring the frontier of generative AI. I've shipped production software at a logistics tech company in Tashkent and won Best Overall at HackUSF 2025.</p>
-          <p>Interested in backend engineering, AI/ML tooling, and automation. Writing clean code that actually ships.</p>
+        <h1 class="hero-name">Bekhruz<br>Mukhammadaliyev</h1>
+        <p class="hero-role">Software Engineer</p>
+        <p class="hero-tagline">Backend systems, data pipelines,<br class="hero-br"> and AI tools that ship.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-filled">View Projects</a>
+          <a href="#contact" class="btn btn-outlined">Get in Touch</a>
         </div>
+      </div>
+      <div class="hero-visual">
+        <img
+          src="https://picsum.photos/seed/bekhruz-software-engineer-workspace/1200/630"
+          alt="Software engineering workspace"
+          class="hero-image"
+          width="1200"
+          height="630"
+        />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-white">
+      <div class="section-col">
+        <h2 class="heading reveal">Who I Am</h2>
+        <p class="body-text reveal">I'm a software engineer and IT student at the University of South Florida, graduating August 2027. I build backend systems, data pipelines, and AI-powered tools that solve real problems at production scale.</p>
+        <p class="body-text reveal">Currently Tech Lead at Google Developer Group at USF, guiding students through their first software projects and exploring the frontier of generative AI. I've shipped production software at a logistics tech company in Tashkent and won Best Overall at HackUSF 2025.</p>
         <div class="about-stats reveal">
           <div class="stat">
-            <span class="stat-n">2</span>
-            <span class="stat-l">Internships</span>
+            <span class="stat-number">2</span>
+            <span class="stat-label">Internships</span>
           </div>
           <div class="stat">
-            <span class="stat-n">25+</span>
-            <span class="stat-l">Students Mentored</span>
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Students Mentored</span>
           </div>
           <div class="stat">
-            <span class="stat-n">2+</span>
-            <span class="stat-l">Projects Shipped</span>
+            <span class="stat-number">6</span>
+            <span class="stat-label">Projects Shipped</span>
           </div>
-          <div class="stat stat--award">
-            <span class="stat-n">Best Overall</span>
-            <span class="stat-l">HackUSF 2025</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="heading-lg">TECH<br>STACK</h2>
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <h3 class="skill-group-label">Programming</h3>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Go</span>
-            <span class="tag">R</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3 class="skill-group-label">Frameworks &amp; AI</h3>
-          <div class="tags">
-            <span class="tag">Django</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">LangGraph</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">Gemini AI</span>
-            <span class="tag">Vertex AI</span>
-            <span class="tag">MediaPipe</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3 class="skill-group-label">Databases</h3>
-          <div class="tags">
-            <span class="tag">MySQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">DuckDB</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3 class="skill-group-label">Cloud &amp; Platforms</h3>
-          <div class="tags">
-            <span class="tag">Google Cloud</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">Docker</span>
+          <div class="stat">
+            <span class="stat-number">1st</span>
+            <span class="stat-label">HackUSF 2025</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="container">
-      <p class="eyebrow">Experience</p>
-      <h2 class="heading-lg">WORK<br>HISTORY</h2>
-      <div class="list">
+    <!-- Skills -->
+    <section id="skills" class="section section-frost">
+      <div class="section-col">
+        <h2 class="heading reveal">Tech Stack</h2>
+        <div class="skills-grid">
 
-        <div class="list-item reveal">
-          <div class="list-meta">
-            <span class="meta-date">June 2025 - Present</span>
-            <span class="meta-loc">Tampa, FL</span>
-          </div>
-          <div class="list-body">
-            <h3 class="list-title">Tech Lead</h3>
-            <p class="list-org">Google Developer Group at USF</p>
-            <ul class="bullets">
-              <li>Guided 20+ students through their first projects; taught Python, Git, LangChain, prompt design, and CI via workshops.</li>
-              <li>Hosted a 2-hour hands-on workshop for 25+ attendees; incorporated participant feedback to improve learning outcomes.</li>
-              <li>Improved GenAI response quality by 40% using Vertex AI embedding models and caching strategies.</li>
-            </ul>
-            <div class="tags">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-label">Programming</h3>
+            <div class="tag-row">
               <span class="tag">Python</span>
-              <span class="tag">Vertex AI</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">GitHub Actions</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item reveal">
-          <div class="list-meta">
-            <span class="meta-date">June - August 2025</span>
-            <span class="meta-loc">Tashkent, UZ</span>
-          </div>
-          <div class="list-body">
-            <h3 class="list-title">Software Engineering Intern</h3>
-            <p class="list-org">Tashkent LLC — Logistics Technology</p>
-            <ul class="bullets">
-              <li>Built KPI dashboards from scratch using MySQL data modeling and automated ETL pipelines, cutting driver onboarding time by 15%.</li>
-              <li>Engineered Python automation scripts reducing staff workload by 30%.</li>
-              <li>Improved monthly reporting accuracy by 25% via data validation systems across large-scale MySQL datasets.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">ETL</span>
-              <span class="tag">Automation</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="heading-lg">SELECTED<br>WORK</h2>
-      <div class="list">
-
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta">
-            <span class="tag tag--award">HackUSF Best Overall 2025</span>
-          </div>
-          <div class="list-body">
-            <div class="project-header">
-              <h3 class="project-title">Stroke Shield</h3>
-              <a href="https://github.com/bekhruzmd/strokeshield" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
-            </div>
-            <p class="project-desc">Real-time web system using computer vision and speech analysis to detect stroke indicators (drooping face, head tilt, slurred speech) in the browser.</p>
-            <div class="tags">
+              <span class="tag">C</span>
+              <span class="tag">C++</span>
               <span class="tag">JavaScript</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">MediaPipe</span>
-              <span class="tag">Gemini AI</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Go</span>
+              <span class="tag">R</span>
             </div>
           </div>
-        </div>
 
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta">
-            <a href="https://pulseetl.streamlit.app" target="_blank" rel="noopener" class="ghost-link">Live</a>
-          </div>
-          <div class="list-body">
-            <div class="project-header">
-              <h3 class="project-title">PulseETL</h3>
-              <a href="https://github.com/bekhruzmd/production-grade-etl" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-label">AI &amp; Frameworks</h3>
+            <div class="tag-row">
+              <span class="tag">Django</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Gemini AI</span>
+              <span class="tag">Vertex AI</span>
+              <span class="tag">MediaPipe</span>
             </div>
-            <p class="project-desc">Self-healing data pipeline ingesting from three source types with Pydantic validation, dbt transforms, and semantic search via 384-d embeddings stored in DuckDB. No separate vector DB.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Dagster</span>
-              <span class="tag">dbt</span>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-label">Databases</h3>
+            <div class="tag-row">
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
               <span class="tag">DuckDB</span>
-              <span class="tag">Streamlit</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-label">Cloud &amp; Platforms</h3>
+            <div class="tag-row">
+              <span class="tag">Google Cloud</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub Actions</span>
               <span class="tag">Docker</span>
             </div>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-white">
+      <div class="section-col">
+        <h2 class="heading reveal">Work History</h2>
+        <div class="exp-list">
+
+          <div class="exp-item reveal">
+            <div class="exp-meta">
+              <span class="exp-period">June 2025 - Present</span>
+              <span class="exp-location">Tampa, FL</span>
+            </div>
+            <div class="exp-body">
+              <h3 class="exp-role">Tech Lead</h3>
+              <p class="exp-org">Google Developer Group at USF</p>
+              <ul class="exp-bullets">
+                <li>Guided 20+ students through their first projects, teaching Python, Git, LangChain, and CI practices via workshops.</li>
+                <li>Hosted a 2-hour hands-on workshop for 25+ attendees, incorporating participant feedback to improve learning outcomes.</li>
+                <li>Improved GenAI response quality by 40% using Vertex AI embedding models and caching strategies.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">Vertex AI</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-meta">
+              <span class="exp-period">June - Aug 2025</span>
+              <span class="exp-location">Tashkent, UZ</span>
+            </div>
+            <div class="exp-body">
+              <h3 class="exp-role">Software Engineering Intern</h3>
+              <p class="exp-org">Tashkent LLC - Logistics Technology</p>
+              <ul class="exp-bullets">
+                <li>Built KPI dashboards with MySQL data modeling and automated ETL pipelines, cutting driver onboarding time by 15%.</li>
+                <li>Engineered Python automation scripts that reduced staff workload by 30%.</li>
+                <li>Improved monthly reporting accuracy by 25% via data validation across large-scale MySQL datasets.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">ETL</span>
+                <span class="tag">Automation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-frost section-projects">
+      <div class="section-col">
+        <h2 class="heading reveal">Selected Work</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/stroke-medical-detection/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top">
+              <span class="project-badge">HackUSF Best Overall 2025</span>
+            </div>
+            <div class="project-card-bottom">
+              <h3 class="project-title">Stroke Shield</h3>
+              <p class="project-desc">Real-time stroke detection via computer vision and speech analysis in the browser.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">JavaScript</span>
+                <span class="tag tag-glass">MediaPipe</span>
+                <span class="tag tag-glass">Gemini AI</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/strokeshield" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta"></div>
-          <div class="list-body">
-            <div class="project-header">
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/data-pipeline-abstract/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top">
+              <a href="https://pulseetl.streamlit.app" target="_blank" rel="noopener" class="project-link-pill">Live</a>
+            </div>
+            <div class="project-card-bottom">
+              <h3 class="project-title">PulseETL</h3>
+              <p class="project-desc">Self-healing data pipeline with semantic search, dbt transforms, and DuckDB-stored embeddings.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">Python</span>
+                <span class="tag tag-glass">Dagster</span>
+                <span class="tag tag-glass">DuckDB</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/production-grade-etl" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/study-ai-flashcards/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top"></div>
+            <div class="project-card-bottom">
               <h3 class="project-title">Blashcards</h3>
-              <a href="https://github.com/bekhruzmd/blashcards" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
-            </div>
-            <p class="project-desc">AI-powered CLI tool that transforms raw documents into structured flashcards using Google Vertex AI. Complete ETL pipeline from PDF/DOCX/TXT to 7+ export formats including Anki.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Vertex AI</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Typer</span>
+              <p class="project-desc">AI CLI tool transforming raw documents into Anki-ready flashcards via Vertex AI and LangChain.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">Python</span>
+                <span class="tag tag-glass">Vertex AI</span>
+                <span class="tag tag-glass">LangChain</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/blashcards" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta">
-            <a href="https://fleetview-app.vercel.app/#/overview" target="_blank" rel="noopener" class="ghost-link">Live</a>
-          </div>
-          <div class="list-body">
-            <div class="project-header">
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/logistics-fleet-truck/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top">
+              <a href="https://fleetview-app.vercel.app/#/overview" target="_blank" rel="noopener" class="project-link-pill">Live</a>
+            </div>
+            <div class="project-card-bottom">
               <h3 class="project-title">FleetView</h3>
-              <a href="https://github.com/bekhruzmd/fleetview" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
-            </div>
-            <p class="project-desc">Full-stack operations dashboard for a 60-truck logistics fleet — real-time vehicle status, per-wheel tire pressure, maintenance history, and diesel cost intelligence.</p>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Recharts</span>
-              <span class="tag">SQLite</span>
+              <p class="project-desc">Full-stack operations dashboard for a 60-truck logistics fleet with live telemetry and fuel intelligence.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">FastAPI</span>
+                <span class="tag tag-glass">React</span>
+                <span class="tag tag-glass">TypeScript</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/fleetview" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta">
-            <a href="https://bekhruzmd.github.io/checkly/" target="_blank" rel="noopener" class="ghost-link">Live</a>
-          </div>
-          <div class="list-body">
-            <div class="project-header">
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/biometric-face-recognition/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top">
+              <a href="https://bekhruzmd.github.io/checkly/" target="_blank" rel="noopener" class="project-link-pill">Live</a>
+            </div>
+            <div class="project-card-bottom">
               <h3 class="project-title">Checkly</h3>
-              <a href="https://github.com/bekhruzmd/checkly" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
-            </div>
-            <p class="project-desc">Face-recognition attendance system as a browser-installable PWA. Workers check in via selfie, matched against enrolled ArcFace embeddings. No photos are ever stored.</p>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">InsightFace</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">PWA</span>
+              <p class="project-desc">Face-recognition attendance PWA using ArcFace embeddings. No photos stored on disk.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">FastAPI</span>
+                <span class="tag tag-glass">InsightFace</span>
+                <span class="tag tag-glass">PWA</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/checkly" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="list-item list-item--project reveal">
-          <div class="list-meta">
-            <span class="tag tag--award">DevFest 2025</span>
-          </div>
-          <div class="list-body">
-            <div class="project-header">
+        <div class="project-card reveal" style="--card-img: url('https://picsum.photos/seed/food-kitchen-pantry/800/540')">
+          <div class="project-card-inner">
+            <div class="project-card-top">
+              <span class="project-badge">DevFest 2025</span>
+            </div>
+            <div class="project-card-bottom">
               <h3 class="project-title">Bullavor</h3>
-              <a href="https://github.com/bekhruzmd/bullavor-final" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
-            </div>
-            <p class="project-desc">AI-powered food pantry app that reduces household food waste. Tracks inventory and surfaces meal suggestions based on what you already have.</p>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">React</span>
-              <span class="tag">Vite</span>
-              <span class="tag">AI</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="heading-lg">ACADEMIC<br>BACKGROUND</h2>
-      <div class="list">
-        <div class="list-item reveal">
-          <div class="list-meta">
-            <span class="meta-date">Expected Aug 2027</span>
-            <span class="meta-loc">Tampa, FL</span>
-          </div>
-          <div class="list-body">
-            <h3 class="list-title">B.S. Information Technology</h3>
-            <p class="list-org">University of South Florida</p>
-            <p class="courses-label">Relevant Coursework</p>
-            <div class="tags">
-              <span class="tag">Object-Oriented Programming</span>
-              <span class="tag">Program Design (C)</span>
-              <span class="tag">Databases (SQL)</span>
-              <span class="tag">Data Science (R)</span>
-              <span class="tag">Cybersecurity (Linux)</span>
+              <p class="project-desc">AI pantry app that surfaces meal suggestions from ingredients you already have at home.</p>
+              <div class="tag-row">
+                <span class="tag tag-glass">FastAPI</span>
+                <span class="tag tag-glass">React</span>
+                <span class="tag tag-glass">Vite</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://github.com/bekhruzmd/bullavor-final" target="_blank" rel="noopener" class="project-link-pill">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="heading-lg">GET IN<br>TOUCH</h2>
-      <p class="contact-body reveal">Open to internships, co-ops, and full-time roles in backend engineering, AI/ML tooling, and data infrastructure.</p>
-      <div class="contact-links reveal">
-        <a href="mailto:bekhruzapp@gmail.com" class="contact-link">bekhruzapp@gmail.com</a>
-        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-        <a href="mailto:bekhruzapp@gmail.com" class="cta-pill">Send a Message</a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-white">
+      <div class="edu-block reveal">
+        <h2 class="heading-display">University of<br>South Florida</h2>
+        <p class="edu-degree">B.S. Information Technology</p>
+        <p class="edu-meta">Tampa, FL &nbsp;&middot;&nbsp; Expected August 2027</p>
+        <div class="tag-row tag-row-center">
+          <span class="tag">OOP (Python)</span>
+          <span class="tag">Databases (SQL)</span>
+          <span class="tag">Data Science (R)</span>
+          <span class="tag">Cybersecurity (Linux)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-frost">
+      <div class="contact-block reveal">
+        <h2 class="heading-display">Let's build<br>something.</h2>
+        <p class="contact-body">Open to internships, co-ops, and full-time roles in backend engineering, AI/ML tooling, and data infrastructure.</p>
+        <div class="contact-actions">
+          <a href="mailto:bekhruzapp@gmail.com" class="btn btn-filled">Send Email</a>
+          <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="btn btn-outlined">LinkedIn</a>
+        </div>
+        <div class="contact-aux">
+          <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+          <a href="tel:+18135607628" class="ghost-link">+1 (813) 560-7628</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
-      <p>Bekhruz Mukhammadaliyev &nbsp;&middot;&nbsp; <span id="year"></span></p>
-      <div class="footer-socials">
-        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="ghost-link">LinkedIn</a>
-        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+      <div class="footer-top">
+        <p class="footer-legal">Copyright &copy; <span id="year"></span> Bekhruz Mukhammadaliyev. All rights reserved.</p>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col-label">Connect</p>
+          <a href="mailto:bekhruzapp@gmail.com" class="footer-link">Email</a>
+          <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Work</p>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#skills" class="footer-link">Skills</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Info</p>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#education" class="footer-link">Education</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
       </div>
     </div>
   </footer>

@@ -1,7 +1,10 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Hamburger / full-screen mobile menu
+// Hero entrance — add class so animations run and elements start from opacity:0
+requestAnimationFrame(() => document.body.classList.add('hero-anim'));
+
+// Hamburger / mobile menu
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -24,26 +27,26 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 });
 
 // Scroll reveal
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     const siblings = entry.target.parentElement.querySelectorAll('.reveal');
     let idx = 0;
-    siblings.forEach((s, si) => { if (s === entry.target) idx = si; });
+    siblings.forEach((s, i) => { if (s === entry.target) idx = i; });
     setTimeout(() => entry.target.classList.add('visible'), idx * 70);
-    revealObserver.unobserve(entry.target);
+    revealObs.unobserve(entry.target);
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-// Smooth scroll offset for fixed nav
+// Smooth scroll with nav offset
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 72;
+    const top = target.getBoundingClientRect().top + window.scrollY - 52;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });

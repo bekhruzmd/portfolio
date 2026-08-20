@@ -1,45 +1,41 @@
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
+// Hamburger / full-screen mobile menu
+const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  mobileMenu.setAttribute('aria-hidden', String(!open));
+  document.body.style.overflow = open ? 'hidden' : '';
 });
+
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   });
 });
 
-// Reveal on scroll
+// Scroll reveal
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const delay = entry.target.dataset.delay || 0;
-      setTimeout(() => entry.target.classList.add('visible'), delay);
-      revealObserver.unobserve(entry.target);
-    }
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const siblings = entry.target.parentElement.querySelectorAll('.reveal');
+    let idx = 0;
+    siblings.forEach((s, si) => { if (s === entry.target) idx = si; });
+    setTimeout(() => entry.target.classList.add('visible'), idx * 70);
+    revealObserver.unobserve(entry.target);
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach((el, i) => {
-  // Stagger siblings in the same parent
-  const siblings = el.parentElement.querySelectorAll('.reveal');
-  let siblingIndex = 0;
-  siblings.forEach((s, si) => { if (s === el) siblingIndex = si; });
-  el.dataset.delay = siblingIndex * 80;
-  revealObserver.observe(el);
-});
-
-// Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // Smooth scroll offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(a => {

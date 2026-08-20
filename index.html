@@ -3,105 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23fc1c46'/></svg>" />
   <title>Bekhruz Mukhammadaliyev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Bekhruz Mukhammadaliyev — software engineer and IT student at USF. Building backend systems, data pipelines, and AI tools." />
+  <meta property="og:title" content="Bekhruz Mukhammadaliyev" />
+  <meta property="og:description" content="Software engineer building backend systems, data pipelines, and AI tools that ship. Tech Lead at GDG at USF. HackUSF 2025 Best Overall." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bekhruz Mukhammadaliyev" />
+  <meta name="twitter:description" content="Software engineer building backend systems, data pipelines, and AI tools that ship." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <!-- Navigation -->
   <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">BM</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-mark" aria-hidden="true"></span>
+        <span class="nav-wordmark">Bekhruz M.</span>
+      </a>
+      <span class="nav-tagline">Software Engineer &nbsp;&middot;&nbsp; Tampa, FL</span>
+      <div class="nav-right">
+        <a href="#contact" class="cta-pill">Contact</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
     <ul>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#about"      class="mobile-link">About</a></li>
+      <li><a href="#skills"     class="mobile-link">Stack</a></li>
       <li><a href="#experience" class="mobile-link">Experience</a></li>
-      <li><a href="#projects" class="mobile-link">Projects</a></li>
-      <li><a href="#education" class="mobile-link">Education</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#projects"   class="mobile-link">Work</a></li>
+      <li><a href="#education"  class="mobile-link">Education</a></li>
+      <li><a href="#contact"    class="mobile-link">Contact</a></li>
     </ul>
-  </div>
+  </nav>
+
+  <main id="main-content">
 
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-bg">
-      <div class="hero-glow"></div>
-    </div>
-    <div class="hero-content">
-      <span class="hero-eyebrow">Software Engineer</span>
-      <h1 class="hero-name">Bekhruz<br />Mukhammadaliyev</h1>
-      <p class="hero-statement">Building backend systems, data pipelines, and AI tools that ship.</p>
-      <p class="hero-location">Tampa, FL</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker">Software Engineer</p>
+        <h1 class="hero-display">
+          <b>BEKHRUZ</b>
+          <span>MUKHAM<br>MADALIYEV</span>
+        </h1>
+        <p class="hero-body">Building backend systems, data pipelines,<br>and AI tools that ship.</p>
+        <a href="#projects" class="cta-pill cta-pill--lg">View Work</a>
       </div>
-      <div class="hero-socials">
-        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="mailto:bekhruzapp@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
+      <div class="hero-sphere" aria-hidden="true">
+        <div class="sphere-inner"></div>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-dot"></div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">About</span>
-        <h2>Who I Am</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>I'm a <strong>software engineer and IT student</strong> at the University of South Florida, expected to graduate in August 2027. I build backend systems, data pipelines, and AI-powered tools that solve real problems.</p>
-          <p>Currently serving as <strong>Tech Lead at Google Developer Group at USF</strong>, I guide students through their first software projects and explore the frontier of generative AI. I've shipped production software at a logistics tech company in Tashkent, Uzbekistan, and won <strong>Best Overall at HackUSF 2025</strong>.</p>
-          <p>I'm passionate about <strong>backend engineering, AI/ML tooling, and automation</strong> — writing clean code that actually ships.</p>
+      <p class="eyebrow">About</p>
+      <h2 class="heading-lg">WHO<br>I AM</h2>
+      <div class="about-layout">
+        <div class="about-body reveal">
+          <p>I'm a software engineer and IT student at the University of South Florida, expected to graduate August 2027. I build backend systems, data pipelines, and AI-powered tools that solve real problems.</p>
+          <p>Currently Tech Lead at Google Developer Group at USF, guiding students through their first software projects and exploring the frontier of generative AI. I've shipped production software at a logistics tech company in Tashkent and won Best Overall at HackUSF 2025.</p>
+          <p>Interested in backend engineering, AI/ML tooling, and automation. Writing clean code that actually ships.</p>
         </div>
         <div class="about-stats reveal">
-          <div class="stat-card">
-            <span class="stat-number">2</span>
-            <span class="stat-label">Internships &amp; Roles</span>
+          <div class="stat">
+            <span class="stat-n">2</span>
+            <span class="stat-l">Internships</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">2+</span>
-            <span class="stat-label">Projects Shipped</span>
+          <div class="stat">
+            <span class="stat-n">25+</span>
+            <span class="stat-l">Students Mentored</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">25+</span>
-            <span class="stat-label">Students Mentored</span>
+          <div class="stat">
+            <span class="stat-n">2+</span>
+            <span class="stat-l">Projects Shipped</span>
           </div>
-          <div class="stat-card stat-card-accent">
-            <span class="stat-number">🏆</span>
-            <span class="stat-label">HackUSF Best Overall</span>
+          <div class="stat stat--award">
+            <span class="stat-n">Best Overall</span>
+            <span class="stat-l">HackUSF 2025</span>
           </div>
         </div>
       </div>
@@ -109,20 +105,13 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section section-alt">
+  <section id="skills" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Skills</span>
-        <h2>Tech Stack</h2>
-      </div>
+      <h2 class="heading-lg">TECH<br>STACK</h2>
       <div class="skills-grid">
-
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">⚡</span>
-            <h3>Programming</h3>
-          </div>
-          <div class="skill-tags">
+        <div class="skill-group reveal">
+          <h3 class="skill-group-label">Programming</h3>
+          <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">C</span>
             <span class="tag">C++</span>
@@ -133,67 +122,37 @@
             <span class="tag">R</span>
           </div>
         </div>
-
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🤖</span>
-            <h3>Frameworks &amp; AI</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="tag tag-purple">Django</span>
-            <span class="tag tag-purple">LangChain</span>
-            <span class="tag tag-purple">LangGraph</span>
-            <span class="tag tag-purple">Pandas</span>
-            <span class="tag tag-purple">Matplotlib</span>
-            <span class="tag tag-purple">Gemini AI</span>
-            <span class="tag tag-purple">Vertex AI</span>
-            <span class="tag tag-purple">MediaPipe</span>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-label">Frameworks &amp; AI</h3>
+          <div class="tags">
+            <span class="tag">Django</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Gemini AI</span>
+            <span class="tag">Vertex AI</span>
+            <span class="tag">MediaPipe</span>
           </div>
         </div>
-
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🗄️</span>
-            <h3>Databases</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="tag tag-green">MySQL</span>
-            <span class="tag tag-green">PostgreSQL</span>
-            <span class="tag tag-green">MongoDB</span>
-            <span class="tag tag-green">MariaDB</span>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-label">Databases</h3>
+          <div class="tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">DuckDB</span>
           </div>
         </div>
-
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">☁️</span>
-            <h3>Cloud &amp; Platforms</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="tag tag-blue">Google Cloud</span>
-            <span class="tag tag-blue">Vertex AI</span>
-            <span class="tag tag-blue">Linux</span>
-            <span class="tag tag-blue">Git</span>
-            <span class="tag tag-blue">GitHub</span>
-            <span class="tag tag-blue">GitHub Actions</span>
+        <div class="skill-group reveal">
+          <h3 class="skill-group-label">Cloud &amp; Platforms</h3>
+          <div class="tags">
+            <span class="tag">Google Cloud</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Docker</span>
           </div>
         </div>
-
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🔧</span>
-            <h3>Strengths</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="tag tag-orange">Backend Systems</span>
-            <span class="tag tag-orange">REST APIs</span>
-            <span class="tag tag-orange">ETL Pipelines</span>
-            <span class="tag tag-orange">Automation</span>
-            <span class="tag tag-orange">Debugging</span>
-            <span class="tag tag-orange">Workflow Optimization</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -201,83 +160,51 @@
   <!-- Experience -->
   <section id="experience" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Experience</span>
-        <h2>Work History</h2>
-      </div>
-      <div class="timeline">
+      <p class="eyebrow">Experience</p>
+      <h2 class="heading-lg">WORK<br>HISTORY</h2>
+      <div class="list">
 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Tech Lead</h3>
-                <p class="timeline-org">Google Developer Group at USF</p>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">June 2025 – Present</span>
-                <span class="timeline-location">Tampa, FL</span>
-              </div>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Guided 20+ students through their first projects; taught Python, Git/GitHub, LangChain/LangGraph, prompt design, and CI via workshops.</li>
-              <li>Hosted a 2-hour hands-on workshop for 25+ attendees; incorporated participant feedback (CSV/Anki export, error clarity, metrics) to improve learning outcomes.</li>
-              <li>Explored GenAI integration using Vertex AI to enhance flashcard accuracy and automate prompt generation; improved response quality by <strong>40%</strong> using embedding models and caching strategies.</li>
+        <div class="list-item reveal">
+          <div class="list-meta">
+            <span class="meta-date">June 2025 - Present</span>
+            <span class="meta-loc">Tampa, FL</span>
+          </div>
+          <div class="list-body">
+            <h3 class="list-title">Tech Lead</h3>
+            <p class="list-org">Google Developer Group at USF</p>
+            <ul class="bullets">
+              <li>Guided 20+ students through their first projects; taught Python, Git, LangChain, prompt design, and CI via workshops.</li>
+              <li>Hosted a 2-hour hands-on workshop for 25+ attendees; incorporated participant feedback to improve learning outcomes.</li>
+              <li>Improved GenAI response quality by 40% using Vertex AI embedding models and caching strategies.</li>
             </ul>
-            <div class="timeline-tags">
-              <span class="tag tag-sm">Python</span>
-              <span class="tag tag-sm">Vertex AI</span>
-              <span class="tag tag-sm">LangChain</span>
-              <span class="tag tag-sm">GitHub Actions</span>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Vertex AI</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">GitHub Actions</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Software Engineering Intern</h3>
-                <p class="timeline-org">Tashkent LLC — Logistics Technology</p>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">June – August 2025</span>
-                <span class="timeline-location">Tashkent, Uzbekistan</span>
-              </div>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Built and deployed KPI dashboards from scratch using MySQL data modeling and automated ETL pipelines, cutting driver onboarding time by <strong>15%</strong>.</li>
-              <li>Engineered Python automation scripts to eliminate manual data entry workflows, reducing staff workload by <strong>30%</strong> and freeing hours for higher-value operations.</li>
-              <li>Architected data validation systems across large-scale datasets in MySQL, improving monthly reporting accuracy by <strong>25%</strong>.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="tag tag-sm">Python</span>
-              <span class="tag tag-sm">MySQL</span>
-              <span class="tag tag-sm">ETL</span>
-              <span class="tag tag-sm">Automation</span>
-            </div>
+        <div class="list-item reveal">
+          <div class="list-meta">
+            <span class="meta-date">June - August 2025</span>
+            <span class="meta-loc">Tashkent, UZ</span>
           </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot timeline-dot-dim"></div>
-          <div class="timeline-card timeline-card-dim">
-            <div class="timeline-header">
-              <div>
-                <h3>Student Worker</h3>
-                <p class="timeline-org">Compass Group</p>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">August 2025 – Present</span>
-                <span class="timeline-location">Tampa, FL</span>
-              </div>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Handled daily cashiering and food service for 200+ students/staff per shift.</li>
-              <li>Contributed to <strong>20% faster</strong> turnaround times during peak dining hours through cross-functional kitchen support.</li>
+          <div class="list-body">
+            <h3 class="list-title">Software Engineering Intern</h3>
+            <p class="list-org">Tashkent LLC — Logistics Technology</p>
+            <ul class="bullets">
+              <li>Built KPI dashboards from scratch using MySQL data modeling and automated ETL pipelines, cutting driver onboarding time by 15%.</li>
+              <li>Engineered Python automation scripts reducing staff workload by 30%.</li>
+              <li>Improved monthly reporting accuracy by 25% via data validation systems across large-scale MySQL datasets.</li>
             </ul>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Automation</span>
+            </div>
           </div>
         </div>
 
@@ -286,171 +213,125 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Projects</span>
-        <h2>What I've Built</h2>
-      </div>
-      <div class="projects-grid">
+      <h2 class="heading-lg">SELECTED<br>WORK</h2>
+      <div class="list">
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">🛡️</div>
-            <div class="project-actions">
-              <div class="project-badge">🏆 HackUSF Best Overall 2025</div>
-              <a href="https://github.com/bekhruzmd/strokeshield" class="project-github-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                GitHub
-              </a>
-            </div>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta">
+            <span class="tag tag--award">HackUSF Best Overall 2025</span>
           </div>
-          <h3>Stroke Shield</h3>
-          <p class="project-desc">Real-time web system using computer vision and speech analysis to detect stroke indicators — drooping face, head tilt, and slurred speech — in the browser.</p>
-          <ul class="project-bullets">
-            <li>Utilized MediaPipe for face and pose detection to identify physical stroke symptoms.</li>
-            <li>Integrated Web Speech API and Google Gemini to analyze speech coherence and detect slurring.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">JavaScript</span>
-            <span class="tag tag-sm">Node.js</span>
-            <span class="tag tag-sm">Express</span>
-            <span class="tag tag-sm">MediaPipe</span>
-            <span class="tag tag-sm">Gemini AI</span>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">Stroke Shield</h3>
+              <a href="https://github.com/bekhruzmd/strokeshield" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+            </div>
+            <p class="project-desc">Real-time web system using computer vision and speech analysis to detect stroke indicators (drooping face, head tilt, slurred speech) in the browser.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MediaPipe</span>
+              <span class="tag">Gemini AI</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">🃏</div>
-            <a href="https://github.com/bekhruzmd/blashcards" class="project-github-link" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              GitHub
-            </a>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta">
+            <a href="https://pulseetl.streamlit.app" target="_blank" rel="noopener" class="ghost-link">Live</a>
           </div>
-          <h3>Blashcards</h3>
-          <p class="project-desc">AI-powered CLI tool that transforms raw documents into structured flashcards using Google Vertex AI — complete ETL pipeline from PDF/DOCX/TXT to 7+ export formats.</p>
-          <ul class="project-bullets">
-            <li>Integrated Vertex AI via LangChain to generate concise Q&amp;A flashcards from unstructured text.</li>
-            <li>Built multi-format export pipeline (CSV, JSON, Excel, Anki) using Pandas and Python data classes.</li>
-            <li>Designed interactive CLI with Typer and Rich for progress tracking and formatted output.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">Python</span>
-            <span class="tag tag-sm">Vertex AI</span>
-            <span class="tag tag-sm">LangChain</span>
-            <span class="tag tag-sm">Pandas</span>
-            <span class="tag tag-sm">Typer</span>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">PulseETL</h3>
+              <a href="https://github.com/bekhruzmd/production-grade-etl" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+            </div>
+            <p class="project-desc">Self-healing data pipeline ingesting from three source types with Pydantic validation, dbt transforms, and semantic search via 384-d embeddings stored in DuckDB. No separate vector DB.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Dagster</span>
+              <span class="tag">dbt</span>
+              <span class="tag">DuckDB</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Docker</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">📊</div>
-            <div class="project-actions">
-              <a href="https://pulseetl.streamlit.app" class="project-github-link" target="_blank" rel="noopener">Live ↗</a>
-              <a href="https://github.com/bekhruzmd/production-grade-etl" class="project-github-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                GitHub
-              </a>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta"></div>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">Blashcards</h3>
+              <a href="https://github.com/bekhruzmd/blashcards" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
             </div>
-          </div>
-          <h3>PulseETL</h3>
-          <p class="project-desc">Self-healing data pipeline ingesting from three source types (GitHub API, file drops, NDJSON event streams), with Pydantic validation and quarantine before records reach the warehouse, then dbt transforms across staging and mart layers.</p>
-          <ul class="project-bullets">
-            <li>Implements watermark-based incremental loads, CDC deduplication, and row-level lineage tracking — all backed by a single DuckDB file with zero extra infrastructure.</li>
-            <li>Generates 384-d sentence embeddings (all-MiniLM-L6-v2) stored as <code>FLOAT[384]</code> in DuckDB, enabling cosine-similarity semantic search without a separate vector DB.</li>
-            <li>Orchestrated with Dagster (sensors, schedules, asset checks), a six-tab Streamlit observability dashboard, Docker Compose, and 75 in-memory tests.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">Python</span>
-            <span class="tag tag-sm">Dagster</span>
-            <span class="tag tag-sm">dbt</span>
-            <span class="tag tag-sm">DuckDB</span>
-            <span class="tag tag-sm">Pydantic</span>
-            <span class="tag tag-sm">Streamlit</span>
-            <span class="tag tag-sm">Docker</span>
+            <p class="project-desc">AI-powered CLI tool that transforms raw documents into structured flashcards using Google Vertex AI. Complete ETL pipeline from PDF/DOCX/TXT to 7+ export formats including Anki.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Vertex AI</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Typer</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">🚚</div>
-            <div class="project-actions">
-              <a href="https://fleetview-app.vercel.app/#/overview" class="project-github-link" target="_blank" rel="noopener">Live ↗</a>
-              <a href="https://github.com/bekhruzmd/fleetview" class="project-github-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                GitHub
-              </a>
-            </div>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta">
+            <a href="https://fleetview-app.vercel.app/#/overview" target="_blank" rel="noopener" class="ghost-link">Live</a>
           </div>
-          <h3>FleetView</h3>
-          <p class="project-desc">Full-stack operations dashboard for a 60-truck logistics fleet — real-time vehicle status, per-wheel tire pressure, maintenance history, and diesel cost intelligence across stations.</p>
-          <ul class="project-bullets">
-            <li>Built FastAPI backend with SQLAlchemy modeling vehicle telemetry, oil levels, maintenance events, and fuel transactions across the fleet.</li>
-            <li>Designed React + TypeScript frontend with a live truck grid, per-vehicle detail views, and a Recharts fuel price ranker with configurable look-back windows.</li>
-            <li>Covered API with pytest test suite using FastAPI's TestClient.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">Python</span>
-            <span class="tag tag-sm">FastAPI</span>
-            <span class="tag tag-sm">React</span>
-            <span class="tag tag-sm">TypeScript</span>
-            <span class="tag tag-sm">Tailwind</span>
-            <span class="tag tag-sm">SQLite</span>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">FleetView</h3>
+              <a href="https://github.com/bekhruzmd/fleetview" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+            </div>
+            <p class="project-desc">Full-stack operations dashboard for a 60-truck logistics fleet — real-time vehicle status, per-wheel tire pressure, maintenance history, and diesel cost intelligence.</p>
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Recharts</span>
+              <span class="tag">SQLite</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">🥬</div>
-            <div class="project-actions">
-              <div class="project-badge">DevFest 2025</div>
-              <a href="https://github.com/bekhruzmd/bullavor-final" class="project-github-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                GitHub
-              </a>
-            </div>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta">
+            <a href="https://bekhruzmd.github.io/checkly/" target="_blank" rel="noopener" class="ghost-link">Live</a>
           </div>
-          <h3>Bullavor</h3>
-          <p class="project-desc">AI-powered food pantry app that reduces household food waste — tracks your inventory and surfaces meal suggestions based on what you already have.</p>
-          <ul class="project-bullets">
-            <li>Integrated AI to analyze pantry contents and generate ingredient-based meal recommendations.</li>
-            <li>Built React + Vite frontend with a FastAPI backend handling inventory state and suggestion API.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">Python</span>
-            <span class="tag tag-sm">FastAPI</span>
-            <span class="tag tag-sm">React</span>
-            <span class="tag tag-sm">Vite</span>
-            <span class="tag tag-sm">AI</span>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">Checkly</h3>
+              <a href="https://github.com/bekhruzmd/checkly" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+            </div>
+            <p class="project-desc">Face-recognition attendance system as a browser-installable PWA. Workers check in via selfie, matched against enrolled ArcFace embeddings. No photos are ever stored.</p>
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">InsightFace</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">PWA</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon">👤</div>
-            <div class="project-actions">
-              <a href="https://bekhruzmd.github.io/checkly/" class="project-github-link" target="_blank" rel="noopener">Live ↗</a>
-              <a href="https://github.com/bekhruzmd/checkly" class="project-github-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                GitHub
-              </a>
-            </div>
+        <div class="list-item list-item--project reveal">
+          <div class="list-meta">
+            <span class="tag tag--award">DevFest 2025</span>
           </div>
-          <h3>Checkly</h3>
-          <p class="project-desc">Face-recognition attendance system built as a browser-installable PWA — workers check in via selfie, matched against enrolled embeddings. No photos are ever stored.</p>
-          <ul class="project-bullets">
-            <li>Integrated InsightFace (ArcFace) for face enrollment and matching with threshold-based accept/flag/reject and a liveness heuristic.</li>
-            <li>Engineered GPS geofencing with Haversine distance validation and a hash-chained append-only audit log to prevent tampering.</li>
-            <li>Shipped as a PWA using only browser APIs (getUserMedia, Geolocation) — no app store required.</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tag tag-sm">Python</span>
-            <span class="tag tag-sm">FastAPI</span>
-            <span class="tag tag-sm">InsightFace</span>
-            <span class="tag tag-sm">PostgreSQL</span>
-            <span class="tag tag-sm">PWA</span>
+          <div class="list-body">
+            <div class="project-header">
+              <h3 class="project-title">Bullavor</h3>
+              <a href="https://github.com/bekhruzmd/bullavor-final" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+            </div>
+            <p class="project-desc">AI-powered food pantry app that reduces household food waste. Tracks inventory and surfaces meal suggestions based on what you already have.</p>
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">AI</span>
+            </div>
           </div>
         </div>
 
@@ -461,29 +342,23 @@
   <!-- Education -->
   <section id="education" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Education</span>
-        <h2>Academic Background</h2>
-      </div>
-      <div class="education-card reveal">
-        <div class="edu-left">
-          <div class="edu-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Official_USF_Bulls_Athletic_Logo.png" alt="USF Bulls" />
+      <h2 class="heading-lg">ACADEMIC<br>BACKGROUND</h2>
+      <div class="list">
+        <div class="list-item reveal">
+          <div class="list-meta">
+            <span class="meta-date">Expected Aug 2027</span>
+            <span class="meta-loc">Tampa, FL</span>
           </div>
-        </div>
-        <div class="edu-right">
-          <h3>Bachelor of Science in Information Technology</h3>
-          <p class="edu-school">University of South Florida</p>
-          <p class="edu-meta">Tampa, FL &nbsp;·&nbsp; Expected August 2027</p>
-          <div class="edu-courses">
-            <span class="edu-label">Relevant Coursework</span>
-            <div class="skill-tags" style="margin-top: 0.5rem;">
-              <span class="tag tag-sm">Object-Oriented Programming (Python)</span>
-              <span class="tag tag-sm">Program Design (C)</span>
-              <span class="tag tag-sm">Computer Organization (RISC)</span>
-              <span class="tag tag-sm">Databases (SQL)</span>
-              <span class="tag tag-sm">Data Science (R)</span>
-              <span class="tag tag-sm">Cybersecurity (Linux)</span>
+          <div class="list-body">
+            <h3 class="list-title">B.S. Information Technology</h3>
+            <p class="list-org">University of South Florida</p>
+            <p class="courses-label">Relevant Coursework</p>
+            <div class="tags">
+              <span class="tag">Object-Oriented Programming</span>
+              <span class="tag">Program Design (C)</span>
+              <span class="tag">Databases (SQL)</span>
+              <span class="tag">Data Science (R)</span>
+              <span class="tag">Cybersecurity (Linux)</span>
             </div>
           </div>
         </div>
@@ -492,52 +367,30 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Contact</span>
-        <h2>Let's Connect</h2>
-      </div>
-      <div class="contact-grid">
-        <a href="mailto:bekhruzapp@gmail.com" class="contact-card reveal">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <p class="contact-label">Email</p>
-            <p class="contact-value">bekhruzapp@gmail.com</p>
-          </div>
-        </a>
-        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:2rem;height:2rem;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div>
-            <p class="contact-label">LinkedIn</p>
-            <p class="contact-value">linkedin.com/in/bekhruz-m</p>
-          </div>
-        </a>
-        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:2rem;height:2rem;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          </div>
-          <div>
-            <p class="contact-label">GitHub</p>
-            <p class="contact-value">github.com/bekhruzmd</p>
-          </div>
-        </a>
-        <a href="tel:+18135607628" class="contact-card reveal">
-          <div class="contact-icon">📞</div>
-          <div>
-            <p class="contact-label">Phone</p>
-            <p class="contact-value">+1 (813) 560-7628</p>
-          </div>
-        </a>
+      <h2 class="heading-lg">GET IN<br>TOUCH</h2>
+      <p class="contact-body reveal">Open to internships, co-ops, and full-time roles in backend engineering, AI/ML tooling, and data infrastructure.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:bekhruzapp@gmail.com" class="contact-link">bekhruzapp@gmail.com</a>
+        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+        <a href="mailto:bekhruzapp@gmail.com" class="cta-pill">Send a Message</a>
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
-    <p>Built by Bekhruz Mukhammadaliyev &nbsp;·&nbsp; <span id="year"></span></p>
+    <div class="footer-inner">
+      <p>Bekhruz Mukhammadaliyev &nbsp;&middot;&nbsp; <span id="year"></span></p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/bekhruz-m" target="_blank" rel="noopener" class="ghost-link">LinkedIn</a>
+        <a href="https://github.com/bekhruzmd" target="_blank" rel="noopener" class="ghost-link">GitHub</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

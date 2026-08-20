@@ -1,0 +1,22 @@
+# Markdown docs (design specs, AI-generated artifacts)
+*.md
+
+# Claude Code / AI tooling
+.claude/
+.agents/
+.serena/
+skills-lock.json
+
+# Vercel local config
+.vercel/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+Thumbs.db
+
+# Node
+node_modules/

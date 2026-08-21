@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Minimalist Grid/Tech background subtle -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#F3F4F6" stroke-width="1" />
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#F3F4F6" stroke-width="1" />
+  
+  <!-- Central Icon Group -->
+  <g transform="translate(600, 270)">
+    
+    <!-- Camera Reticle / Capture Frame (Obsidian) -->
+    <path d="M -60 -80 L -80 -80 A 20 20 0 0 0 -100 -60 L -100 -40" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <path d="M -100 40 L -100 60 A 20 20 0 0 0 -80 80 L -60 80" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <path d="M 60 -80 L 80 -80 A 20 20 0 0 1 100 -60 L 100 -40" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <path d="M 100 40 L 100 60 A 20 20 0 0 1 80 80 L 60 80" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Abstract Face Embedding Topology -->
+    <!-- Connecting Lines -->
+    <path d="M -25 -20 L 0 5 L 25 -20" fill="none" stroke="#0F172A" stroke-width="4" stroke-linejoin="round" />
+    <path d="M -25 -20 L -35 35 L 0 55 L 35 35 L 25 -20" fill="none" stroke="#0F172A" stroke-width="4" stroke-linejoin="round" />
+    <path d="M 0 5 L 0 55" fill="none" stroke="#0F172A" stroke-width="4" stroke-linejoin="round" />
+    <path d="M -25 -20 L -45 -5 L -35 35" fill="none" stroke="#0F172A" stroke-width="4" stroke-linejoin="round" />
+    <path d="M 25 -20 L 45 -5 L 35 35" fill="none" stroke="#0F172A" stroke-width="4" stroke-linejoin="round" />
+
+    <!-- Data Vertices / Math Points -->
+    <circle cx="-25" cy="-20" r="5" fill="#0F172A" />
+    <circle cx="25" cy="-20" r="5" fill="#0F172A" />
+    <circle cx="0" cy="5" r="5" fill="#0F172A" />
+    <circle cx="-35" cy="35" r="5" fill="#0F172A" />
+    <circle cx="35" cy="35" r="5" fill="#0F172A" />
+    <circle cx="0" cy="55" r="5" fill="#0F172A" />
+    <circle cx="-45" cy="-5" r="5" fill="#0F172A" />
+    <circle cx="45" cy="-5" r="5" fill="#0F172A" />
+
+    <!-- Vertical Scan Line / Processing (Signal Cyan) -->
+    <line x1="15" y1="-95" x2="15" y2="95" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" />
+    <circle cx="15" cy="-95" r="4" fill="#06B6D4" />
+    <circle cx="15" cy="95" r="4" fill="#06B6D4" />
+
+    <!-- Metadata / Verified Node (Pulse Crimson) -->
+    <circle cx="80" cy="-80" r="8" fill="#F43F5E" />
+    <circle cx="80" cy="-80" r="16" fill="none" stroke="#F43F5E" stroke-width="3" opacity="0.4" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="600" y="450" font-family="system-ui, -apple-system, 'Inter', sans-serif" font-size="42" font-weight="800" fill="#0F172A" text-anchor="middle" letter-spacing="6">CHECKLY</text>
+</svg>

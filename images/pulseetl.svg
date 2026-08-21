@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Minimalist Grid/Tech background subtle -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#F3F4F6" stroke-width="1" />
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#F3F4F6" stroke-width="1" />
+  
+  <!-- Central Icon Group -->
+  <g transform="translate(600, 270)">
+    <!-- Main Helix Flow -->
+    
+    <!-- Ingestion Loop -->
+    <circle cx="-130" cy="-30" r="28" fill="none" stroke="#06B6D4" stroke-width="6" />
+    
+    <!-- Vertical Column -->
+    <line x1="-130" y1="0" x2="-130" y2="-120" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <line x1="-130" y1="-120" x2="-80" y2="-150" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    
+    <line x1="80" y1="0" x2="130" y2="-30" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Transformation Bridge -->
+    <path d="M -80 -150 A 50 50 0 0 1 80 -150" fill="none" stroke="#F43F5E" stroke-width="6" stroke-linecap="round" opacity="0.95" />
+    
+    <!-- Helix Weave -->
+    <path d="M 80 0 A 50 50 0 0 1 -80 0" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <line x1="80" y1="-150" x2="80" y2="0" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Analysis stages -->
+    <line x1="130" y1="-30" x2="130" y2="-80" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    <path d="M 130 -80 A 25 25 0 0 0 80 -105" fill="none" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    <path d="M 80 -105 A 25 25 0 0 0 130 -130" fill="none" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    <line x1="130" y1="-130" x2="130" y2="-180" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Top Arrow Analysis -->
+    <polygon points="130,-190 145,-170 115,-170" fill="#06B6D4" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="600" y="450" font-family="system-ui, -apple-system, 'Inter', sans-serif" font-size="42" font-weight="800" fill="#0F172A" text-anchor="middle" letter-spacing="6">PULSEETL</text>
+</svg>

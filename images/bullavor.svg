@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Minimalist Grid/Tech background subtle -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#F3F4F6" stroke-width="1" />
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#F3F4F6" stroke-width="1" />
+  
+  <!-- Central Icon Group -->
+  <g transform="translate(600, 270)">
+    <!-- Culinary Cloche / Food Dome -->
+    <!-- Dome Arch -->
+    <path d="M -80 20 A 80 80 0 0 1 80 20" fill="none" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Plate Base -->
+    <line x1="-105" y1="20" x2="105" y2="20" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    <line x1="-60" y1="32" x2="60" y2="32" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    
+    <!-- Dome Top Handle -->
+    <line x1="-12" y1="-60" x2="12" y2="-60" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+    <line x1="0" y1="-60" x2="0" y2="-72" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" />
+
+    <!-- AI Core / Bull Motif (Inside the Dome) -->
+    
+    <!-- Central Processing Node -->
+    <circle cx="0" cy="-10" r="14" fill="none" stroke="#F43F5E" stroke-width="6" />
+    <circle cx="0" cy="-10" r="4" fill="#F43F5E" />
+    <line x1="0" y1="4" x2="0" y2="20" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Circuit Branches / Geometric Bull Horns -->
+    <!-- Left Horn Circuit -->
+    <path d="M -14 -10 Q -45 -10, -45 -38" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="-45" cy="-38" r="5" fill="#0F172A" />
+    
+    <!-- Right Horn Circuit -->
+    <path d="M 14 -10 Q 45 -10, 45 -38" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="45" cy="-38" r="5" fill="#0F172A" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="600" y="450" font-family="system-ui, -apple-system, 'Inter', sans-serif" font-size="42" font-weight="800" fill="#0F172A" text-anchor="middle" letter-spacing="6">BULLAVOR</text>
+</svg>

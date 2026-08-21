@@ -276,7 +276,7 @@ img  { display: block; max-width: 100%; }
 }
 
 .hero-text {
-  padding: 80px 24px 40px;
+  padding: 80px 24px 100px;
   max-width: var(--max-text);
   margin: 0 auto;
 }
@@ -316,32 +316,17 @@ img  { display: block; max-width: 100%; }
   flex-wrap: wrap;
 }
 
-.hero-visual {
-  max-width: var(--max-text);
-  margin: 48px auto 0;
-  padding: 0 24px 80px;
-}
-
 /* Hero entrance — only fires once JS adds .hero-anim to <body> */
 .hero-anim .hero-name    { animation: fade-up 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.08s both; }
 .hero-anim .hero-role    { animation: fade-up 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.22s both; }
 .hero-anim .hero-tagline { animation: fade-up 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.36s both; }
 .hero-anim .hero-actions { animation: fade-up 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.50s both; }
-.hero-anim .hero-visual  { animation: fade-in 0.80s cubic-bezier(0.23, 1, 0.32, 1) 0.64s both; }
 
 .hero-anim .hero-name,
 .hero-anim .hero-role,
 .hero-anim .hero-tagline,
-.hero-anim .hero-actions,
-.hero-anim .hero-visual {
-  opacity: 0; /* backwards fill — hidden until animation fires */
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  border-radius: var(--r-card);
-  box-shadow: var(--shadow-product);
+.hero-anim .hero-actions {
+  opacity: 0;
 }
 
 /* ════════════════════════════════════
@@ -573,7 +558,7 @@ img  { display: block; max-width: 100%; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
+  gap: 16px;
   max-width: var(--max-page);
   margin: 24px auto 0;
   padding: 0 24px;
@@ -585,6 +570,7 @@ img  { display: block; max-width: 100%; }
   border-radius: var(--r-card);
   overflow: hidden;
   aspect-ratio: 3 / 2;
+  background-color: var(--card-bg, #111);
   background-image: var(--card-img);
   background-size: cover;
   background-position: center;
@@ -802,8 +788,7 @@ footer {
   .hero-anim .hero-name,
   .hero-anim .hero-role,
   .hero-anim .hero-tagline,
-  .hero-anim .hero-actions,
-  .hero-anim .hero-visual {
+  .hero-anim .hero-actions {
     animation: none;
     opacity: 1;
   }
@@ -838,9 +823,8 @@ footer {
   .hamburger { display: flex; }
 
   /* Hero */
-  .hero-text   { padding: 56px 20px 32px; }
-  .hero-visual { padding: 0 20px 56px; margin-top: 36px; }
-  .hero-br     { display: none; }
+  .hero-text { padding: 56px 20px 72px; }
+  .hero-br   { display: none; }
 
   /* Sections */
   .section { padding: 60px 20px; }

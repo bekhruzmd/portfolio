@@ -400,11 +400,11 @@ img  { display: block; max-width: 100%; }
   background: transparent;
 }
 
-/* Glass tags on dark photo backgrounds */
+/* Glass tags on light card backgrounds */
 .tag-glass {
-  color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--carbon);
+  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 /* ════════════════════════════════════
@@ -592,15 +592,22 @@ img  { display: block; max-width: 100%; }
   padding: 20px;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.08) 0%,
-    transparent 35%,
-    rgba(0, 0, 0, 0.78) 100%
+    rgba(255, 255, 255, 0.0) 0%,
+    rgba(255, 255, 255, 0.0) 38%,
+    rgba(255, 255, 255, 0.97) 72%,
+    rgba(255, 255, 255, 1.0) 100%
   );
 }
 
 .project-card-top {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.section-projects .heading {
+  color: #000000;
 }
 
 .project-badge {
@@ -618,23 +625,23 @@ img  { display: block; max-width: 100%; }
 .project-link-pill {
   font-size: var(--sz-caption);
   font-weight: 400;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.18);
+  color: var(--carbon);
+  background: rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 0.5px solid rgba(255, 255, 255, 0.38);
+  border: 0.5px solid rgba(0, 0, 0, 0.18);
   border-radius: var(--r-pill);
   padding: 5px 12px;
   text-decoration: none;
   letter-spacing: var(--ls-caption);
   transition: background 140ms ease;
 }
-.project-link-pill:hover { background: rgba(255, 255, 255, 0.28); }
+.project-link-pill:hover { background: rgba(0, 0, 0, 0.13); }
 
 .project-title {
   font-size: var(--sz-h3);
   font-weight: 600;
-  color: #fff;
+  color: var(--carbon);
   letter-spacing: var(--ls-h3);
   line-height: var(--lh-h3);
   margin-bottom: 6px;
@@ -643,7 +650,7 @@ img  { display: block; max-width: 100%; }
 .project-desc {
   font-size: var(--sz-sm);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--ash);
   letter-spacing: var(--ls-sm);
   line-height: var(--lh-sm);
   margin-bottom: 10px;

@@ -329,6 +329,32 @@
       text-align: center;
     }
 
+    /* ── 67 OVERLAY ── */
+    #overlay67 {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      flex-direction: column;
+    }
+    #overlay67.active { display: flex; }
+    #overlay67 img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      animation: shake 0.3s ease infinite;
+    }
+    #overlay67 .overlay67-hint {
+      color: #fff;
+      font-size: 14px;
+      margin-top: 16px;
+      opacity: 0.6;
+    }
+
     /* ── VISITOR COUNTER ── */
     .visitor-counter {
       text-align: center;
@@ -676,6 +702,11 @@
     <small>ULTRASECURE™ PORTAL ENGINE v7.4.2 — PROPRIETARY TECHNOLOGY</small>
   </div>
 
+
+  <div id="overlay67" onclick="close67()">
+    <img src="unnamed.png" alt="67" />
+    <div class="overlay67-hint">click anywhere to continue (if you can)</div>
+  </div>
 
   <!-- MFA MODAL — morse code, 7-second timer -->
   <div class="modal-overlay" id="mfaOverlay">
@@ -1046,6 +1077,20 @@
     document.addEventListener('mousemove', resetIdle);
     document.addEventListener('keydown',   resetIdle);
     resetIdle();
+
+    // ── 67 EASTER EGG ────────────────────────────────────────────────────────
+    let lastKey = '';
+    document.addEventListener('keydown', function(e) {
+      if (lastKey === '6' && e.key === '7') trigger67();
+      lastKey = e.key;
+    });
+
+    function trigger67() {
+      document.getElementById('overlay67').classList.add('active');
+    }
+    function close67() {
+      document.getElementById('overlay67').classList.remove('active');
+    }
 
     // ── INVERTED PASSWORD STRENGTH METER ─────────────────────────────────────
     // Shorter = stronger. Complexity = penalty. Always wrong.

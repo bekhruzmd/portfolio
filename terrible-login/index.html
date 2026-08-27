@@ -701,9 +701,9 @@
         <div class="security-q">
           Please answer your security question <strong>exactly</strong> as entered during registration.<br><br>
           <strong>Security Question 1:</strong><br>
-          "What was the exact atmospheric pressure (in hectopascals, to exactly 2 decimal places) at your precise GPS coordinates at the moment of your birth?"
+          "What was the closing stock price (in USD, to exactly 4 decimal places) of the company whose ticker symbol is the same as your mother's maiden name initials, on the day you created this account?"
         </div>
-        <input type="text" id="sq1" placeholder="e.g. 1013.25" />
+        <input type="text" id="sq1" placeholder="e.g. 142.3700" />
         <button class="modal-btn" onclick="forgotNext(1)">Continue →</button>
         <div class="modal-error" id="forgotErr1"></div>
       </div>
@@ -711,9 +711,9 @@
       <div id="forgotS2" style="display:none">
         <div class="security-q">
           <strong>Security Question 2:</strong><br>
-          "In what exact order did you press keys on your keyboard the very first time you used a computer? (List all keys pressed in sequence, separated by commas.)"
+          "What is the ICAO airport code of the airport closest to where you were standing when you first heard about this website? (4-letter code, uppercase)"
         </div>
-        <input type="text" id="sq2" placeholder="e.g. t,y,p,i,n,g,Space,h,i,..." />
+        <input type="text" id="sq2" placeholder="e.g. KJFK" maxlength="4" style="text-transform:uppercase;letter-spacing:4px;" />
         <button class="modal-btn" onclick="forgotNext(2)">Continue →</button>
         <div class="modal-error" id="forgotErr2"></div>
       </div>
@@ -721,9 +721,9 @@
       <div id="forgotS3" style="display:none">
         <div class="security-q">
           <strong>Security Question 3:</strong><br>
-          "What was the exact SHA-256 hash of your very first password (before any changes)?"
+          "According to RFC 3339, what was the exact UTC timestamp (to millisecond precision) of your first successful login attempt on this system?"
         </div>
-        <input type="text" id="sq3" placeholder="64 hex characters" maxlength="64" style="font-family:monospace;font-size:10px;" />
+        <input type="text" id="sq3" placeholder="e.g. 2023-04-11T09:32:17.441Z" style="font-family:monospace;font-size:10px;" />
         <button class="modal-btn" onclick="forgotNext(3)">Continue →</button>
         <div class="modal-error" id="forgotErr3"></div>
       </div>

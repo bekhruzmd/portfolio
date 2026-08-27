@@ -3,534 +3,539 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🔒 ULTRA SECURE LOGIN PORTAL™ 🔒</title>
+  <title>My Login Page!!</title>
   <style>
-    /* ─────────────────────────────────────────────
-       BAD PRACTICE: Comic Sans as the primary font
-    ───────────────────────────────────────────── */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-    @keyframes bgShift {
-      0%   { background-position: 0%   50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0%   50%; }
-    }
     @keyframes spin {
       from { transform: rotate(0deg); }
       to   { transform: rotate(360deg); }
     }
     @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.1; }
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
     }
     @keyframes shake {
       0%, 100% { transform: translateX(0); }
-      20%      { transform: translateX(-10px); }
-      40%      { transform: translateX(10px); }
-      60%      { transform: translateX(-8px); }
-      80%      { transform: translateX(8px); }
+      20%      { transform: translateX(-8px); }
+      40%      { transform: translateX(8px); }
+      60%      { transform: translateX(-6px); }
+      80%      { transform: translateX(6px); }
     }
     @keyframes marqueeScroll {
       0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-200%); }
     }
     @keyframes captchaSpin {
       0%   { transform: rotate(0deg)   scale(1); }
-      25%  { transform: rotate(15deg)  scale(0.9); }
-      75%  { transform: rotate(-10deg) scale(1.05); }
+      25%  { transform: rotate(18deg)  scale(0.88); }
+      75%  { transform: rotate(-12deg) scale(1.08); }
       100% { transform: rotate(0deg)   scale(1); }
+    }
+    @keyframes rainbow {
+      0%   { color: red; }
+      16%  { color: orange; }
+      33%  { color: #cccc00; }
+      50%  { color: green; }
+      66%  { color: blue; }
+      83%  { color: purple; }
+      100% { color: red; }
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       min-height: 100vh;
-      /* BAD PRACTICE: Animated gradient background — low contrast for all text */
-      background: linear-gradient(270deg, #1a0a2e, #0d1b4b, #2e0d1a, #1a2e0d);
-      background-size: 400% 400%;
-      animation: bgShift 4s ease infinite;
+      /* classic solid blue with very subtle stripe — what every beginner picks */
+      background-color: #2d6aa0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px,
+        transparent 1px, transparent 8px
+      );
       font-family: "Comic Sans MS", "Comic Sans", cursive;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
       overflow-x: hidden;
     }
 
-    /* ─── MARQUEE TICKER ─── */
+    /* ── TICKER ── */
     .ticker-wrap {
       width: 100%;
-      background: rgba(255,0,0,0.15);
-      border-bottom: 2px dashed red;
-      padding: 6px 0;
+      background: #ffff00;
+      border-bottom: 3px solid red;
+      padding: 5px 0;
       overflow: hidden;
       white-space: nowrap;
     }
     .ticker-text {
       display: inline-block;
-      /* BAD PRACTICE: Marquee — outdated, distracting, not accessible */
-      animation: marqueeScroll 18s linear infinite;
-      /* BAD PRACTICE: Red-on-dark is hard to read */
-      color: #ff4444;
-      font-size: 12px;
+      animation: marqueeScroll 20s linear infinite;
+      color: red;
+      font-size: 13px;
       font-weight: bold;
-      letter-spacing: 1px;
     }
 
-    /* ─── MAIN CARD ─── */
-    .card {
-      margin-top: 32px;
-      width: 400px;
-      /* BAD PRACTICE: Semi-transparent card on busy background = low contrast */
-      background: rgba(255,255,255,0.07);
-      border: 2px solid rgba(255,255,255,0.15);
-      border-radius: 4px;
-      padding: 28px 32px;
-      backdrop-filter: blur(2px);
-      position: relative;
-    }
-
-    h1 {
+    /* ── PAGE HEADER ── */
+    .page-header {
       text-align: center;
-      /* BAD PRACTICE: Purple text on dark background barely passes contrast */
-      color: #bb88ff;
-      font-size: 15px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      margin-top: 18px;
       margin-bottom: 4px;
     }
-    .subtitle {
-      text-align: center;
-      /* BAD PRACTICE: Tiny grey text — WCAG fail */
-      color: #666;
-      font-size: 9px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
+    .page-header h1 {
+      font-size: 28px;
+      color: #ffffff;
+      text-shadow: 2px 2px 0 #003366;
+      animation: rainbow 3s linear infinite;
+      text-decoration: underline;
+    }
+    .page-header .tagline {
+      font-size: 12px;
+      color: #cce4ff;
+      margin-top: 4px;
     }
 
-    /* ─── FORM FIELDS ─── */
-    .field {
+    /* ── MAIN CARD ── */
+    .card {
+      background: #ffffff;
+      border: 3px solid #003366;
+      /* classic beginner box-shadow offset */
+      box-shadow: 6px 6px 0px #003366;
+      width: 450px;
+      margin-top: 16px;
+      padding: 22px 28px 18px;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 18px;
+      color: #003366;
+      font-weight: bold;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 8px;
       margin-bottom: 14px;
     }
-    label {
-      display: block;
-      /* BAD PRACTICE: Low contrast label color */
-      color: #8899aa;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+
+    /* ── ERROR BOX ── */
+    .error-msg {
+      display: none;
+      background: #ff0000;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      border: 2px solid #990000;
+      text-align: center;
+      animation: shake 0.45s ease;
+    }
+    .error-msg.visible { display: block; }
+
+    /* ── PASSWORD RULES ── */
+    .pw-rules {
+      display: none;
+      background: #fffbe6;
+      border: 2px solid #ffaa00;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 11.5px;
+      color: #553300;
+      line-height: 2;
+    }
+    .pw-rules.visible { display: block; }
+    .pw-rules .rules-title {
+      font-weight: bold;
+      font-size: 12px;
+      color: #cc5500;
       margin-bottom: 4px;
     }
+
+    /* ── FORM FIELDS ── */
+    .field { margin-bottom: 12px; }
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 13px;
+      color: #000000;
+      margin-bottom: 3px;
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="number"] {
       width: 100%;
-      padding: 9px 10px;
-      /* BAD PRACTICE: Low contrast border */
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 2px;
-      color: #fff;
+      padding: 6px 8px;
+      border: 2px solid #999999;
+      background: #f5f5f5;
       font-family: "Comic Sans MS", cursive;
       font-size: 13px;
+      color: #000000;
       outline: none;
-      transition: border 0.2s;
     }
-    input:focus { border-color: rgba(255,255,255,0.3); }
+    input:focus { border-color: #003366; background: #eef4ff; }
 
-    /* ─── CAPTCHA BOX ─── */
+    .field-note {
+      font-size: 10px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* ── CAPTCHA ── */
     .captcha-box {
-      background: rgba(0,0,0,0.4);
-      border: 1px dashed #555;
-      border-radius: 2px;
+      background: #fffbe6;
+      border: 2px dashed #aaa;
       padding: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: center;
-      position: relative;
     }
     .captcha-label {
-      color: #8899aa;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      color: #333;
       margin-bottom: 6px;
     }
     .captcha-challenge {
-      /* BAD PRACTICE: Tiny, spinning, low-contrast captcha text */
-      font-size: 11px;
-      color: #445566;
+      /* still tiny, still spinning, still barely visible */
+      font-size: 10px;
+      color: #c8c8c8;
       animation: captchaSpin 3s ease-in-out infinite;
       display: inline-block;
-      letter-spacing: 6px;
-      font-family: monospace;
-      text-shadow: 1px 1px 0 #223344, -1px -1px 0 #334455;
-      margin-bottom: 8px;
+      letter-spacing: 5px;
+      font-family: "Courier New", monospace;
+      text-shadow: 1px 1px 0 #ddd, -1px -1px 0 #eee;
+      margin-bottom: 6px;
     }
     .captcha-refresh {
       display: block;
-      font-size: 8px;
-      color: #555;
+      font-size: 10px;
+      color: #0000ee;
       cursor: pointer;
       text-decoration: underline;
       margin-top: 4px;
     }
-    .captcha-refresh:hover { color: #777; }
 
-    /* ─── PASSWORD RULES (hidden until first failure) ─── */
-    .pw-rules {
-      display: none;
-      background: rgba(255,100,0,0.1);
-      border: 1px solid rgba(255,100,0,0.3);
-      border-radius: 2px;
-      padding: 10px 12px;
-      margin-bottom: 14px;
-      font-size: 9.5px;
-      /* BAD PRACTICE: Orange text on dark — technically readable but unpleasant */
-      color: #cc7700;
-      line-height: 1.8;
-    }
-    .pw-rules.visible { display: block; }
-    .pw-rules .rules-title {
-      font-size: 10px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      color: #ff8800;
+    /* ── DIVIDER ── */
+    hr {
+      border: none;
+      border-top: 1px solid #cccccc;
+      margin: 14px 0;
     }
 
-    /* ─── ERROR MESSAGE ─── */
-    .error-msg {
-      display: none;
-      background: rgba(255,0,0,0.1);
-      border: 1px solid rgba(255,0,0,0.3);
-      border-radius: 2px;
-      padding: 8px 12px;
-      margin-bottom: 14px;
-      font-size: 11px;
-      color: #ff6666;
-      text-align: center;
-      animation: shake 0.5s ease;
-    }
-    .error-msg.visible { display: block; }
-
-    /* ─── SUBMIT BUTTON ─── */
+    /* ── BUTTON WRAPPER ── needs to be tall so the button has room to dodge ── */
     .btn-wrap {
       position: relative;
-      height: 44px;
-      margin-bottom: 12px;
+      height: 90px;
+      margin-bottom: 4px;
     }
     #loginBtn {
       position: absolute;
-      /* BAD PRACTICE: Button dodges the cursor on hover */
-      padding: 10px 28px;
-      background: linear-gradient(135deg, #6600cc, #003399);
-      color: #fff;
-      border: none;
-      border-radius: 2px;
-      font-family: "Comic Sans MS", cursive;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s;
-      white-space: nowrap;
       left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 9px 32px;
+      background: #003399;
+      color: #ffffff;
+      border: 3px outset #6699cc;
+      font-family: "Comic Sans MS", cursive;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: nowrap;
     }
-    #loginBtn:hover { background: linear-gradient(135deg, #7700ee, #0044bb); }
+    #loginBtn:active { border-style: inset; }
 
-    /* ─── LOADER ─── */
+    /* ── LOADER ── */
     .loader {
       display: none;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      margin-bottom: 14px;
-      color: #8899aa;
-      font-size: 11px;
+      padding: 10px 0;
+      font-size: 13px;
+      color: #333;
     }
     .loader.visible { display: flex; }
     .spinner {
       width: 18px;
       height: 18px;
-      border: 2px solid rgba(255,255,255,0.1);
-      border-top-color: #bb88ff;
+      border: 3px solid #cccccc;
+      border-top-color: #003399;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      animation: spin 0.7s linear infinite;
     }
 
-    /* ─── LINKS AREA ─── */
+    /* ── LINKS ── */
     .links {
       text-align: center;
+      font-size: 12px;
       margin-top: 8px;
     }
     .links a {
-      font-size: 10px;
-      /* BAD PRACTICE: Link color is nearly invisible */
-      color: #334455;
+      color: #0000ee;
       text-decoration: underline;
       cursor: pointer;
-      margin: 0 6px;
+      margin: 0 4px;
     }
-    .links a:hover { color: #556677; }
+    .links a:hover { color: #551a8b; }
 
-    /* ─── SECURITY BADGE ─── */
-    .badge {
+    /* ── TOOLTIP (still appears off-screen) ── */
+    .tooltip-wrap { position: relative; display: inline; }
+    .tooltip-wrap:hover .tooltip { display: block; }
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: -280px;
+      top: -8px;
+      background: #ffffcc;
+      border: 1px solid #999;
+      color: #333;
+      font-size: 10px;
+      padding: 5px 8px;
+      white-space: nowrap;
+      z-index: 50;
+      width: 260px;
+      line-height: 1.6;
+      font-weight: normal;
+    }
+
+    /* ── SECURITY BADGES ── */
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .badge-item {
+      border: 2px solid #003366;
+      background: #eef4ff;
+      padding: 4px 8px;
+      font-size: 9px;
+      color: #003366;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ── VISITOR COUNTER ── */
+    .visitor-counter {
       text-align: center;
       margin-top: 16px;
-      font-size: 8px;
-      /* BAD PRACTICE: Decorative noise that means nothing */
-      color: #334;
-      letter-spacing: 1px;
+      font-size: 12px;
+      color: #cce4ff;
     }
-    .badge .blink {
-      animation: blink 1s step-start infinite;
-      color: #228822;
+    .counter-display {
+      display: inline-block;
+      background: #000;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      letter-spacing: 3px;
+      padding: 2px 8px;
+      border: 1px solid #00ff00;
+      margin: 2px 4px;
     }
 
-    /* ─── MFA MODAL ─── */
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 10px;
+      color: #aaccee;
+    }
+    .blink {
+      animation: blink 1s step-start infinite;
+    }
+
+    /* ═══════════════════════════════
+       MODALS — beginner-style
+    ═══════════════════════════════ */
     .modal-overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.6);
       z-index: 100;
       justify-content: center;
       align-items: center;
     }
     .modal-overlay.visible { display: flex; }
+
     .modal {
-      background: #0d0d1a;
-      border: 1px solid #334;
-      border-radius: 4px;
-      padding: 28px 32px;
-      width: 380px;
+      background: #ffffff;
+      border: 3px solid #003366;
+      box-shadow: 6px 6px 0 #003366;
+      padding: 24px 28px;
+      width: 400px;
       text-align: center;
     }
     .modal h2 {
-      color: #bb88ff;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
+      font-size: 16px;
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
     }
     .modal p {
-      color: #667;
-      font-size: 10px;
-      margin-bottom: 16px;
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 12px;
       line-height: 1.6;
+      text-align: left;
     }
-    /* BAD PRACTICE: Morse code is not a standard delivery format for MFA */
+
+    /* morse code display — even harder to read now (light on white) */
     .morse-display {
-      background: #000;
-      border: 1px solid #222;
-      border-radius: 2px;
-      padding: 14px;
+      background: #f5f5f5;
+      border: 2px inset #aaa;
+      padding: 12px;
       font-family: "Courier New", monospace;
       font-size: 11px;
       letter-spacing: 4px;
-      /* BAD PRACTICE: Dark grey on black — barely readable */
-      color: #333;
+      color: #d0d0d0;
       word-break: break-all;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 2;
     }
     .morse-hint {
-      font-size: 8px;
-      color: #334;
-      margin-bottom: 14px;
+      font-size: 9px;
+      color: #aaa;
+      margin-bottom: 12px;
     }
     .mfa-timer {
-      font-size: 11px;
-      color: #cc4444;
-      margin-bottom: 14px;
+      font-size: 13px;
       font-weight: bold;
+      color: #cc0000;
+      margin-bottom: 12px;
     }
     .modal input {
       width: 100%;
-      padding: 9px 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid #334;
-      border-radius: 2px;
-      color: #fff;
+      padding: 6px 8px;
+      border: 2px solid #999;
       font-family: "Comic Sans MS", cursive;
-      font-size: 13px;
-      outline: none;
+      font-size: 14px;
       margin-bottom: 10px;
       text-align: center;
+      background: #f5f5f5;
+      outline: none;
     }
+    .modal input:focus { border-color: #003366; }
     .modal-btn {
       width: 100%;
-      padding: 10px;
-      background: #223;
-      color: #8899aa;
-      border: 1px solid #334;
-      border-radius: 2px;
+      padding: 8px;
+      background: #003399;
+      color: #fff;
+      border: 3px outset #6699cc;
       font-family: "Comic Sans MS", cursive;
-      font-size: 12px;
+      font-size: 13px;
+      font-weight: bold;
       cursor: pointer;
       margin-bottom: 6px;
     }
-    .modal-btn:hover { background: #334; }
+    .modal-btn:active { border-style: inset; }
     .modal-error {
-      font-size: 10px;
-      color: #cc4444;
-      min-height: 14px;
+      font-size: 11px;
+      color: #cc0000;
+      font-weight: bold;
+      min-height: 16px;
       margin-top: 4px;
     }
+    .close-link {
+      font-size: 11px;
+      color: #0000ee;
+      cursor: pointer;
+      text-decoration: underline;
+    }
 
-    /* ─── FORGOT PASSWORD MODAL ─── */
+    /* forgot password */
     .forgot-modal {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.6);
       z-index: 200;
       justify-content: center;
       align-items: center;
     }
     .forgot-modal.visible { display: flex; }
-    .forgot-modal .modal {
-      width: 420px;
-    }
-    .forgot-modal h2 {
-      color: #bb88ff;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    .forgot-modal .modal { width: 440px; }
+
+    .step-indicator {
+      font-size: 11px;
+      color: #555;
       margin-bottom: 10px;
+      font-weight: bold;
     }
-    .forgot-modal .security-q {
-      font-size: 10px;
-      color: #8899aa;
-      margin-bottom: 14px;
+    .security-q {
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 12px;
       line-height: 1.7;
       text-align: left;
-    }
-    .step-indicator {
-      font-size: 8px;
-      color: #445;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+      background: #fffbe6;
+      border: 1px solid #ffaa00;
+      padding: 8px 10px;
     }
     .forgot-modal input {
       width: 100%;
-      padding: 9px 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid #334;
-      border-radius: 2px;
-      color: #fff;
+      padding: 6px 8px;
+      border: 2px solid #999;
       font-family: "Comic Sans MS", cursive;
       font-size: 12px;
-      outline: none;
       margin-bottom: 10px;
+      background: #f5f5f5;
+      outline: none;
     }
-    .close-link {
-      font-size: 9px;
-      color: #445;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    .close-link:hover { color: #667; }
-
-    /* BAD PRACTICE: Tooltip that appears in wrong position */
-    .tooltip-wrap { position: relative; display: inline; }
-    .tooltip-wrap:hover .tooltip {
-      display: block;
-    }
-    .tooltip {
-      display: none;
-      position: absolute;
-      /* Positioned off to the left, likely off-screen */
-      left: -300px;
-      top: -10px;
-      background: #111;
-      color: #aaa;
-      font-size: 9px;
-      padding: 6px 10px;
-      border: 1px solid #333;
-      border-radius: 2px;
-      white-space: nowrap;
-      z-index: 50;
-      width: 280px;
-      line-height: 1.6;
-    }
-
-    /* ─── WATERMARK ─── */
-    .watermark {
-      position: fixed;
-      bottom: 8px;
-      right: 8px;
-      font-size: 7px;
-      color: #222;
-      pointer-events: none;
-      letter-spacing: 1px;
-    }
+    .forgot-modal input:focus { border-color: #003366; }
   </style>
 </head>
 <body>
 
-  <!-- ─────────────────────────────────────────────────────────────
-       BAD PRACTICE #1: Distracting animated marquee with fake
-       security warnings. Causes alert fatigue and draws attention
-       away from the actual form the user needs to complete.
-  ────────────────────────────────────────────────────────────── -->
+  <!-- marquee: yellow on white, very beginner -->
   <div class="ticker-wrap">
     <span class="ticker-text">
       ⚠️ SECURITY ALERT: Your session expires in 99 minutes ⚠️ &nbsp;&nbsp;&nbsp;
       🔒 ALL CONNECTIONS MONITORED AND RECORDED &nbsp;&nbsp;&nbsp;
-      ⚠️ WARNING: You have 2 failed login attempts remaining before permanent lockout ⚠️ &nbsp;&nbsp;&nbsp;
-      🛡️ COMPLIANT WITH ISO 27001 / SOC2 / HIPAA / GDPR / PCI-DSS / FIPS-140-2 🛡️ &nbsp;&nbsp;&nbsp;
+      ⚠️ WARNING: 2 failed attempts remaining before PERMANENT lockout ⚠️ &nbsp;&nbsp;&nbsp;
+      🛡️ CERTIFIED: ISO 27001 / SOC2 / HIPAA / GDPR / PCI-DSS / FIPS-140-2 🛡️ &nbsp;&nbsp;&nbsp;
       ⚠️ DO NOT SHARE YOUR PASSWORD WITH ANYONE INCLUDING IT SUPPORT ⚠️
     </span>
   </div>
 
-  <div class="card">
-    <h1>🔒 ULTRA SECURE LOGIN PORTAL™ 🔒</h1>
-    <div class="subtitle">
-      CERTIFIED ENTERPRISE AUTHENTICATION SYSTEM v7.4.2 — ALL ACCESS LOGGED
-    </div>
+  <div class="page-header">
+    <h1>🔒 MY SECURE LOGIN PAGE!! 🔒</h1>
+    <div class="tagline">welcome!! please log in to continue :)</div>
+  </div>
 
-    <!-- Error message — cleared and re-shown with vague text each attempt -->
-    <!-- BAD PRACTICE #2 (partial): Error message will clear the form and be vague -->
+  <div class="card">
+    <div class="card-title">⚡ USER AUTHENTICATION PORTAL ⚡</div>
+
     <div class="error-msg" id="errorMsg"></div>
 
-    <!-- ───────────────────────────────────────────────────────────
-         BAD PRACTICE #2 (full): Password rules are hidden until
-         after the first failed attempt. Even then, the rules are
-         contradictory and impossible to satisfy simultaneously.
-    ──────────────────────────────────────────────────────────── -->
+    <!-- revealed only after a failed attempt, rules are impossible -->
     <div class="pw-rules" id="pwRules">
-      <div class="rules-title">⚠ Password Requirements (why didn't we tell you earlier? security.)</div>
+      <div class="rules-title">⚠ Password Requirements (sorry we forgot to mention these)</div>
       • Exactly 9 characters (not 8, not 10 — exactly 9)<br>
-      • Must contain at least one emoji from this approved set: 🦆, 🌮, 🪐<br>
+      • Must contain at least one emoji from the approved set: 🦆, 🌮, 🪐<br>
       • Must start with a prime number greater than 100<br>
       • No vowels in positions 2, 4, or 6<br>
       • Must not contain your username <em>or</em> the reverse of your username<br>
       • Must differ from your last 47 passwords<br>
       • Must include the name of a color in Tagalog<br>
-      • Special characters allowed: only § and ¶ (not ! or @)<br>
-      • Spaces are neither allowed nor disallowed — behavior undefined<br>
-      • Password expires in 8 hours from when you first <em>thought</em> of it
+      • Special characters: only § and ¶ allowed (not ! or @)<br>
+      • Spaces: behavior undefined<br>
+      • Password expires 8 hours from when you first <em>thought</em> of it
     </div>
 
     <form id="loginForm" novalidate autocomplete="off">
 
-      <!-- ─────────────────────────────────────────────────────────
-           BAD PRACTICE #3: The "email" field uses type="password"
-           (input is masked), while the "password" field uses
-           type="text" (input is fully visible). Users cannot see
-           what they typed for their email, but their password is
-           shown in plain text to anyone nearby.
-      ────────────────────────────────────────────────────────── -->
+      <!-- EMAIL field is masked (type=password) — bad practice #1 -->
       <div class="field">
         <label for="emailField">
-          Email Address
+          Email Address:
           <span class="tooltip-wrap">
-            <sup style="color:#556;cursor:help">[?]</sup>
-            <!-- BAD PRACTICE: Tooltip appears off-screen to the left -->
+            <sup style="cursor:help;color:#0000ee">[?]</sup>
+            <!-- tooltip appears off-screen to the left — bad practice -->
             <span class="tooltip">
               Your email address. Must be the one you used when you registered,
               unless you changed it, in which case use the new one, unless the
@@ -538,78 +543,70 @@
             </span>
           </span>
         </label>
-        <!-- type="password" on the EMAIL field — input is hidden from user -->
+        <!-- type="password" on the email field so users can't see what they typed -->
         <input
           type="password"
           id="emailField"
           name="email"
-          placeholder="••••••••••••••"
+          placeholder="enter email here"
           autocomplete="off"
           onpaste="return blockPaste(event)"
           spellcheck="false"
         />
-        <div style="font-size:8px;color:#334;margin-top:2px;">
-          ← your email is hidden for security (you should memorize it)
-        </div>
+        <div class="field-note">* your email is hidden for security. you should have memorized it.</div>
       </div>
 
+      <!-- PASSWORD field is visible (type=text) — bad practice #2 -->
       <div class="field">
         <label for="passwordField">
-          Password
+          Password:
           <span class="tooltip-wrap">
-            <sup style="color:#556;cursor:help">[?]</sup>
-            <span class="tooltip">See password requirements. Requirements shown after first failed attempt only.</span>
+            <sup style="cursor:help;color:#0000ee">[?]</sup>
+            <span class="tooltip">Password requirements are shown after your first failed attempt. For security.</span>
           </span>
         </label>
-        <!-- type="text" on the PASSWORD field — fully visible -->
+        <!-- type="text" on the password field — fully visible to bystanders -->
         <input
           type="text"
           id="passwordField"
           name="password"
-          placeholder="type your password here (it's fine, nobody is watching)"
+          placeholder="type your password here (its fine, nobody is watching)"
           autocomplete="new-password"
           onpaste="return blockPaste(event)"
           spellcheck="false"
         />
       </div>
 
-      <!-- ─────────────────────────────────────────────────────────
-           BAD PRACTICE #4: CAPTCHA challenge that is:
-           - Tiny font (11px)
-           - Constantly animated / spinning
-           - Low contrast (dark grey on dark background)
-           - Refreshes randomly every 8 seconds, resetting input
-           - Uses a long multiplication that requires mental math
-           - Has no audio alternative for accessibility
-      ────────────────────────────────────────────────────────── -->
+      <hr>
+
+      <!-- CAPTCHA: tiny, spinning, nearly invisible, auto-refreshes — bad practice #3 -->
       <div class="captcha-box">
-        <div class="captcha-label">Human Verification (Required)</div>
+        <div class="captcha-label">🤖 Are You Human? (required)</div>
         <div class="captcha-challenge" id="captchaChallenge"></div>
+        <br>
         <span class="captcha-refresh" onclick="refreshCaptcha()">
-          ↻ refresh (this will also clear your answers)
+          ↻ refresh captcha (note: this clears all your answers)
         </span>
       </div>
       <div class="field">
-        <label for="captchaInput">Your Answer</label>
+        <label for="captchaInput">Answer:</label>
         <input
           type="number"
           id="captchaInput"
           name="captcha"
-          placeholder="?"
+          placeholder="type the answer to the math problem above"
           autocomplete="off"
           onpaste="return blockPaste(event)"
         />
       </div>
 
-      <!-- ─────────────────────────────────────────────────────────
-           BAD PRACTICE #5: The submit button physically moves away
-           from the cursor when hovered, making it very hard to
-           click. This is maximally frustrating and forces the user
-           to chase the button around the form.
-      ────────────────────────────────────────────────────────── -->
+      <hr>
+
+      <!-- button that runs away from the cursor — bad practice #4 -->
+      <!-- extra height gives the button more room to dodge -->
       <div class="btn-wrap" id="btnWrap">
         <button type="submit" id="loginBtn" onmousemove="dodgeButton(event)">
-          AUTHENTICATE →
+          🔐 LOG IN
         </button>
       </div>
 
@@ -617,44 +614,59 @@
         <div class="spinner"></div>
         <span id="loaderMsg">Verifying credentials…</span>
       </div>
+
     </form>
 
+    <hr>
+
     <div class="links">
-      <!-- BAD PRACTICE: "Forgot password" link leads to impossible recovery -->
-      <a onclick="openForgot()">Forgot password?</a>
-      <span style="color:#334;font-size:10px;">|</span>
-      <!-- BAD PRACTICE: "Create account" does nothing with no explanation -->
-      <a onclick="showError('New account creation has been temporarily disabled. Please try again later (this message has been shown since 2019).')">Create account</a>
-      <span style="color:#334;font-size:10px;">|</span>
-      <a onclick="showError('SSO is available for Enterprise customers. Contact sales@company.internal.corp.io (business days only, responses in 6–8 weeks).')">SSO Login</a>
+      <a onclick="openForgot()">Forgot password?</a> |
+      <a onclick="showError('New account creation has been temporarily disabled. Please try again later (this message has been shown since 2019).')">Create account</a> |
+      <a onclick="showError('SSO is available for Enterprise customers. Contact sales@company.internal.corp.io (business days only, 6–8 week response time).')">SSO Login</a>
     </div>
 
-    <div class="badge">
-      <span class="blink">●</span> LIVE SECURITY MONITORING ACTIVE &nbsp;|&nbsp;
-      AES-256-GCM ENCRYPTED &nbsp;|&nbsp; ZERO-KNOWLEDGE ARCHITECTURE™ &nbsp;|&nbsp;
-      PATENTED SECURE CHANNEL®
+    <div class="badges">
+      <div class="badge-item">✅ SSL<br>SECURED</div>
+      <div class="badge-item">🔒 AES-256<br>ENCRYPTED</div>
+      <div class="badge-item">🛡️ HIPAA<br>COMPLIANT</div>
+      <div class="badge-item">⭐ ISO<br>27001</div>
+      <div class="badge-item">🏆 GDPR<br>READY</div>
     </div>
   </div>
 
-  <!-- ─────────────────────────────────────────────────────────────
-       BAD PRACTICE #6 (MFA): After a "successful" login, the user
-       is shown a 6-digit code rendered in Morse code. The code
-       expires in 7 seconds — far too short to decode Morse. If the
-       timer runs out, the entire login session is invalidated and
-       they must start over (with the form cleared).
-  ────────────────────────────────────────────────────────────── -->
+  <!-- visitor counter — a classic beginner touch -->
+  <div class="visitor-counter">
+    You are visitor number:
+    <span class="counter-display" id="visitorCount">0000000</span>
+    <br>
+    <small>(counter resets on page refresh for security)</small>
+  </div>
+
+  <div class="footer">
+    <span class="blink">★</span>
+    Best viewed in Internet Explorer 6.0 at 800×600 resolution
+    <span class="blink">★</span>
+    <br>
+    © 2024 My Login Page. All Rights Reserved. Do Not Copy.
+    <br>
+    <small>ULTRASECURE™ PORTAL ENGINE v7.4.2 — PROPRIETARY TECHNOLOGY</small>
+  </div>
+
+
+  <!-- MFA MODAL — morse code, 7-second timer -->
   <div class="modal-overlay" id="mfaOverlay">
     <div class="modal">
-      <h2>🔐 Multi-Factor Authentication</h2>
+      <h2>🔐 Two-Factor Authentication</h2>
       <p>
-        For your security, we have sent a 6-digit code to your device.<br>
-        The code is displayed below in <strong>Morse code</strong> — decode it and enter
-        the digits before the timer expires. For security reasons, no audio version is available.
+        For your security, a 6-digit code has been sent to your device.
+        The code is displayed below in <strong>Morse code</strong>.
+        Please decode it and enter the digits before the timer expires.
+        No audio alternative is available for security reasons.
       </p>
       <div class="morse-display" id="morseDisplay"></div>
       <div class="morse-hint">
-        · = dot &nbsp; − = dash &nbsp; / = digit separator<br>
-        Reference table not provided for security reasons.
+        · = dot &nbsp;&nbsp; − = dash &nbsp;&nbsp; / = digit separator<br>
+        (Morse reference chart not provided — security policy)
       </div>
       <div class="mfa-timer" id="mfaTimer"></div>
       <input
@@ -664,30 +676,24 @@
         maxlength="6"
         onpaste="return blockPaste(event)"
       />
-      <button class="modal-btn" onclick="submitMfa()">Verify Code</button>
+      <button class="modal-btn" onclick="submitMfa()">Verify →</button>
       <div class="modal-error" id="mfaError"></div>
-      <div style="margin-top:12px;">
+      <div style="margin-top:10px;">
         <span class="close-link" onclick="closeMfa()">Cancel and start over</span>
       </div>
     </div>
   </div>
 
-  <!-- ─────────────────────────────────────────────────────────────
-       RECOVERY OPTION (but terrible): "Forgot password" requires
-       answering a specific-to-the-second security question with
-       exact numerical precision. Multiple impossible steps.
-  ────────────────────────────────────────────────────────────── -->
+  <!-- FORGOT PASSWORD MODAL — impossible security questions -->
   <div class="forgot-modal" id="forgotOverlay">
-    <div class="forgot-modal" style="display:contents">
-    <div class="modal" style="width:440px;">
-      <h2>Password Recovery</h2>
+    <div class="modal" style="width:460px;">
+      <h2>🔑 Password Recovery</h2>
       <div class="step-indicator" id="forgotStep">STEP 1 OF 4</div>
 
-      <!-- Step 1 -->
       <div id="forgotS1">
         <div class="security-q">
-          To verify your identity, please answer your security question exactly as entered during registration.<br><br>
-          <strong>Security Question:</strong><br>
+          Please answer your security question <strong>exactly</strong> as entered during registration.<br><br>
+          <strong>Security Question 1:</strong><br>
           "What was the exact atmospheric pressure (in hectopascals, to exactly 2 decimal places) at your precise GPS coordinates at the moment of your birth?"
         </div>
         <input type="text" id="sq1" placeholder="e.g. 1013.25" />
@@ -695,40 +701,37 @@
         <div class="modal-error" id="forgotErr1"></div>
       </div>
 
-      <!-- Step 2 -->
       <div id="forgotS2" style="display:none">
         <div class="security-q">
           <strong>Security Question 2:</strong><br>
-          "In what order did you press the keys on your keyboard the very first time you used a computer? (List all keys pressed, in sequence, separated by commas.)"
+          "In what exact order did you press keys on your keyboard the very first time you used a computer? (List all keys pressed in sequence, separated by commas.)"
         </div>
         <input type="text" id="sq2" placeholder="e.g. t,y,p,i,n,g,Space,h,i,..." />
         <button class="modal-btn" onclick="forgotNext(2)">Continue →</button>
         <div class="modal-error" id="forgotErr2"></div>
       </div>
 
-      <!-- Step 3 -->
       <div id="forgotS3" style="display:none">
         <div class="security-q">
           <strong>Security Question 3:</strong><br>
-          "What was the exact SHA-256 hash of your very first password (the one you set on this account before any changes)?"
+          "What was the exact SHA-256 hash of your very first password (before any changes)?"
         </div>
         <input type="text" id="sq3" placeholder="64 hex characters" maxlength="64" style="font-family:monospace;font-size:10px;" />
         <button class="modal-btn" onclick="forgotNext(3)">Continue →</button>
         <div class="modal-error" id="forgotErr3"></div>
       </div>
 
-      <!-- Step 4 (final — vague outcome) -->
       <div id="forgotS4" style="display:none">
-        <div class="security-q" style="text-align:center;color:#cc7700;">
-          ✓ Identity verification complete.<br><br>
+        <div class="security-q" style="text-align:center;color:#553300;">
+          ✅ Identity verification complete!<br><br>
           A password reset link has been sent to the email address on file
-          (the one you used to register — the one you cannot see because it
-          is masked for security). Please check your inbox, spam, promotions,
-          and all subfolders.<br><br>
-          The link expires in <strong>3 minutes</strong> and can only be
-          clicked from the same browser, same device, same IP address, and
-          same Wi-Fi network used during registration.<br><br>
-          If the link has expired, please begin the recovery process again.
+          (the one you registered with — the one that is hidden for security,
+          so you cannot see which address we sent it to).<br><br>
+          Please check your inbox, spam, promotions tab, and all subfolders.<br><br>
+          ⚠️ The link expires in <strong>3 minutes</strong> and can only be clicked
+          from the exact same browser, device, IP address, and Wi-Fi network
+          used during registration.<br><br>
+          If the link has expired, please start the recovery process again.
         </div>
         <button class="modal-btn" onclick="closeForgot()">Back to Login</button>
       </div>
@@ -737,55 +740,52 @@
         <span class="close-link" onclick="closeForgot()">Cancel</span>
       </div>
     </div>
-    </div>
   </div>
 
-  <div class="watermark">ULTRASECURE™ PORTAL ENGINE v7.4.2 — PROPRIETARY</div>
 
   <script>
-    // ─── CAPTCHA GENERATOR ───────────────────────────────────────────────────
+    // ── VISITOR COUNTER (resets every load — "for security") ──────────────────
+    document.getElementById('visitorCount').textContent =
+      String(Math.floor(Math.random() * 9000000) + 1000000);
 
+    // ── CAPTCHA ───────────────────────────────────────────────────────────────
     const CAPTCHA_POOL = [
       { q: "847 × 23 + 419 − 66 = ?",  a: 19848 },
       { q: "⌊√(999983)⌋ + 2³ = ?",      a: 1007  },
-      { q: "13! ÷ 12! − 7² = ?",         a: -36   },  // trick: -36
+      { q: "13! ÷ 12! − 7² = ?",         a: -36   },
       { q: "Sum of primes < 20 = ?",      a: 77    },
       { q: "(2⁸ − 1) × 3 + 17 = ?",      a: 782   },
     ];
 
     let currentCaptcha = null;
-    let captchaTimer = null;
+    let captchaTimer   = null;
 
     function refreshCaptcha() {
       const pick = CAPTCHA_POOL[Math.floor(Math.random() * CAPTCHA_POOL.length)];
       currentCaptcha = pick;
       document.getElementById('captchaChallenge').textContent = pick.q;
       document.getElementById('captchaInput').value = '';
-      // BAD PRACTICE: auto-refreshes every 8 seconds, clearing the user's input
       clearTimeout(captchaTimer);
+      // auto-refresh every 8 seconds, wiping the user's answer
       captchaTimer = setTimeout(() => {
         refreshCaptcha();
         showError('Security timeout: CAPTCHA refreshed. Your answers have been cleared.');
-        document.getElementById('captchaInput').value = '';
       }, 8000);
     }
 
     refreshCaptcha();
 
-    // ─── PASTE BLOCKER ───────────────────────────────────────────────────────
-    // BAD PRACTICE: blocking paste forces manual re-typing of long passwords
+    // ── PASTE BLOCKER — silently swallows paste with no feedback ──────────────
     function blockPaste(e) {
       e.preventDefault();
-      // Silently fails — no message shown to the user
       return false;
     }
 
-    // ─── DODGING BUTTON ──────────────────────────────────────────────────────
-    // BAD PRACTICE: button runs away from the cursor on hover
+    // ── DODGING BUTTON ────────────────────────────────────────────────────────
     let dodgeCount = 0;
     function dodgeButton(e) {
       dodgeCount++;
-      if (dodgeCount % 2 !== 0) return; // only dodge every other mousemove for playability
+      if (dodgeCount % 2 !== 0) return;
       const wrap = document.getElementById('btnWrap');
       const btn  = document.getElementById('loginBtn');
       const rect = wrap.getBoundingClientRect();
@@ -795,24 +795,23 @@
       const by   = btn.offsetTop  + btn.offsetHeight / 2;
       const dx   = bx - mx;
       const dy   = by - my;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 60) {
-        const push = 50 + Math.random() * 40;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 70) {
+        const push  = 55 + Math.random() * 45;
         const angle = Math.atan2(dy, dx);
         let nx = bx + Math.cos(angle) * push;
         let ny = by + Math.sin(angle) * push;
         const maxX = wrap.offsetWidth  - btn.offsetWidth  - 4;
         const maxY = wrap.offsetHeight - btn.offsetHeight - 4;
-        nx = Math.max(0, Math.min(nx - btn.offsetWidth/2,  maxX));
-        ny = Math.max(0, Math.min(ny - btn.offsetHeight/2, maxY));
+        nx = Math.max(0, Math.min(nx - btn.offsetWidth  / 2, maxX));
+        ny = Math.max(0, Math.min(ny - btn.offsetHeight / 2, maxY));
         btn.style.left      = nx + 'px';
         btn.style.top       = ny + 'px';
         btn.style.transform = 'none';
       }
     }
 
-    // ─── VAGUE ERROR MESSAGES ────────────────────────────────────────────────
-    // BAD PRACTICE: rotating generic errors give no actionable guidance
+    // ── VAGUE ROTATING ERROR MESSAGES ─────────────────────────────────────────
     const VAGUE_ERRORS = [
       "An error occurred. Please try again.",
       "Login failed. Credentials may be incorrect.",
@@ -821,7 +820,7 @@
       "Invalid input detected. Please review your information.",
       "Security check failed. Please verify your details.",
       "Session error. All fields have been cleared for your security.",
-      "Unspecified authentication error. Contact support (support ticket avg. response: 11 business days).",
+      "Unspecified authentication error. Contact support (avg. response: 11 business days).",
     ];
     let errorIdx = 0;
 
@@ -829,7 +828,6 @@
       const el = document.getElementById('errorMsg');
       el.textContent = msg || VAGUE_ERRORS[errorIdx++ % VAGUE_ERRORS.length];
       el.classList.add('visible');
-      // Force reflow to restart shake animation
       el.style.animation = 'none';
       el.offsetHeight;
       el.style.animation = '';
@@ -839,15 +837,15 @@
       document.getElementById('errorMsg').classList.remove('visible');
     }
 
-    // ─── FORM SUBMISSION ─────────────────────────────────────────────────────
+    // ── FORM SUBMISSION ───────────────────────────────────────────────────────
     let attemptCount = 0;
 
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       clearError();
 
-      const email    = document.getElementById('emailField').value.trim();
-      const password = document.getElementById('passwordField').value;
+      const email         = document.getElementById('emailField').value.trim();
+      const password      = document.getElementById('passwordField').value;
       const captchaAnswer = parseInt(document.getElementById('captchaInput').value, 10);
 
       if (!email || !password) {
@@ -856,17 +854,15 @@
         return;
       }
 
-      // BAD PRACTICE: wrong captcha gives same vague error as wrong password
       if (isNaN(captchaAnswer) || captchaAnswer !== currentCaptcha.a) {
         attemptCount++;
-        document.getElementById('pwRules').classList.add('visible'); // reveal rules after failure
+        document.getElementById('pwRules').classList.add('visible');
         showError();
         clearForm();
         refreshCaptcha();
         return;
       }
 
-      // Simulate loading
       setLoading(true);
       const messages = [
         'Verifying credentials…',
@@ -886,7 +882,6 @@
         attemptCount++;
         document.getElementById('pwRules').classList.add('visible');
 
-        // After 3 failed attempts, show MFA (which is itself impossible)
         if (attemptCount >= 3) {
           openMfa();
         } else {
@@ -902,14 +897,14 @@
       document.getElementById('loginBtn').style.display = on ? 'none' : 'block';
     }
 
-    // BAD PRACTICE: clears the entire form on any error, forcing re-entry
+    // clears entire form on every error — bad practice
     function clearForm() {
       document.getElementById('emailField').value    = '';
       document.getElementById('passwordField').value = '';
       document.getElementById('captchaInput').value  = '';
     }
 
-    // ─── MFA (MORSE CODE) ────────────────────────────────────────────────────
+    // ── MFA — MORSE CODE, 7-SECOND WINDOW ────────────────────────────────────
     const MORSE_MAP = {
       '0':'-----','1':'.----','2':'..---','3':'...--',
       '4':'....-','5':'.....','6':'-....','7':'--...',
@@ -920,15 +915,15 @@
       return str.split('').map(c => MORSE_MAP[c] || c).join(' / ');
     }
 
-    let mfaCode       = '';
-    let mfaCountdown  = null;
-    let mfaSeconds    = 7; // BAD PRACTICE: 7 seconds to decode Morse code
+    let mfaCode      = '';
+    let mfaCountdown = null;
+    let mfaSeconds   = 7;
 
     function openMfa() {
       mfaCode = String(Math.floor(100000 + Math.random() * 900000));
       document.getElementById('morseDisplay').textContent = toMorse(mfaCode);
-      document.getElementById('mfaInput').value  = '';
-      document.getElementById('mfaError').textContent = '';
+      document.getElementById('mfaInput').value           = '';
+      document.getElementById('mfaError').textContent     = '';
       mfaSeconds = 7;
       updateMfaTimer();
       clearInterval(mfaCountdown);
@@ -938,7 +933,7 @@
         if (mfaSeconds <= 0) {
           clearInterval(mfaCountdown);
           document.getElementById('mfaOverlay').classList.remove('visible');
-          showError('MFA session expired. For security, your login session has been terminated. All fields cleared.');
+          showError('MFA session expired. Your login session has been terminated. All fields cleared.');
           clearForm();
           refreshCaptcha();
           attemptCount = 0;
@@ -954,9 +949,8 @@
 
     function submitMfa() {
       const entered = document.getElementById('mfaInput').value.trim();
-      // BAD PRACTICE: even correct code is rejected after first submission
-      // with a confusing message
       if (entered === mfaCode) {
+        // correct code still fails — redirect loop
         clearInterval(mfaCountdown);
         document.getElementById('mfaError').textContent =
           'Code accepted. Redirecting… (Error 302 — redirect loop detected. Please log in again.)';
@@ -981,7 +975,7 @@
       attemptCount = 0;
     }
 
-    // ─── FORGOT PASSWORD FLOW ────────────────────────────────────────────────
+    // ── FORGOT PASSWORD ───────────────────────────────────────────────────────
     let forgotStep = 1;
 
     function openForgot() {
@@ -1004,19 +998,15 @@
     function forgotNext(step) {
       const input = document.getElementById('sq' + step);
       if (!input || !input.value.trim()) {
-        document.getElementById('forgotErr' + step).textContent =
-          'This field is required.';
+        document.getElementById('forgotErr' + step).textContent = 'This field is required.';
         return;
       }
-      // BAD PRACTICE: answers are never actually validated — you can type anything
-      // but you still can't recover your password usefully
       document.getElementById('forgotErr' + step).textContent = '';
       forgotStep++;
       showForgotStep(forgotStep);
     }
 
-    // ─── SESSION TIMEOUT WARNING ─────────────────────────────────────────────
-    // BAD PRACTICE: fake session warning fires after 20 seconds of inactivity
+    // ── IDLE TIMEOUT — 20 seconds, wipes form ────────────────────────────────
     let idleTimer = null;
     function resetIdle() {
       clearTimeout(idleTimer);

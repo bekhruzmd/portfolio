@@ -181,6 +181,18 @@
       margin-top: 2px;
     }
 
+    /* ── STRENGTH METER ── */
+    .strength-meter { margin-top: 6px; }
+    .strength-bar-wrap {
+      height: 10px;
+      background: #ddd;
+      border: 1px solid #aaa;
+      margin-bottom: 3px;
+    }
+    .strength-bar { height: 100%; transition: width 0.25s, background 0.25s; }
+    .strength-label { font-size: 12px; font-weight: bold; }
+    .strength-tip { font-size: 10px; color: #555; font-style: italic; margin-top: 2px; }
+
     /* ── CAPTCHA ── */
     .captcha-box {
       background: #fffbe6;
@@ -557,7 +569,7 @@
       </div>
 
       <!-- PASSWORD field is visible (type=text) — bad practice #2 -->
-      <div class="field">
+      <div class="field" id="passwordWrap">
         <label for="passwordField">
           Password:
           <span class="tooltip-wrap">
@@ -575,6 +587,11 @@
           onpaste="return blockPaste(event)"
           spellcheck="false"
         />
+        <div class="strength-meter" id="strengthMeter" style="display:none;">
+          <div class="strength-bar-wrap"><div class="strength-bar" id="strengthBar"></div></div>
+          <div class="strength-label" id="strengthLabel"></div>
+          <div class="strength-tip" id="strengthTip"></div>
+        </div>
       </div>
 
       <hr>
@@ -1029,6 +1046,42 @@
     document.addEventListener('mousemove', resetIdle);
     document.addEventListener('keydown',   resetIdle);
     resetIdle();
+
+    // ── INVERTED PASSWORD STRENGTH METER ─────────────────────────────────────
+    // Shorter = stronger. Complexity = penalty. Always wrong.
+    const STRENGTH_LEVELS = [
+      { max: 2,  pct: 100, color: '#007700', label: '💪 VERY STRONG',      tip: 'Perfect! Short passwords are the hardest for hackers to guess.' },
+      { max: 4,  pct: 82,  color: '#44aa00', label: '✅ STRONG',           tip: 'Great choice. Simple passwords are statistically more secure.' },
+      { max: 7,  pct: 55,  color: '#ddaa00', label: '⚠️ MODERATE',         tip: 'Getting a bit long. Consider shortening for better security.' },
+      { max: 10, pct: 28,  color: '#ee6600', label: '❌ WEAK',             tip: 'Too long. Hackers specifically target lengthy passwords.' },
+      { max: Infinity, pct: 8, color: '#cc0000', label: '🚨 VERY WEAK — DANGER', tip: 'Dangerously long. We recommend 3 characters or fewer.' },
+    ];
+
+    const COMPLEXITY_TIPS = [
+      [/[A-Z]/,      'Tip: Uppercase letters are the first thing bots try. Remove them.'],
+      [/[0-9]/,      'Tip: Numbers are the #1 pattern hackers check. Avoid them.'],
+      [/[^a-zA-Z0-9]/, 'Tip: Special characters make passwords harder to remember AND less secure.'],
+    ];
+
+    document.getElementById('passwordField').addEventListener('input', function () {
+      const val    = this.value;
+      const meter  = document.getElementById('strengthMeter');
+      const bar    = document.getElementById('strengthBar');
+      const lbl    = document.getElementById('strengthLabel');
+      const tip    = document.getElementById('strengthTip');
+
+      if (!val) { meter.style.display = 'none'; return; }
+      meter.style.display = 'block';
+
+      const level = STRENGTH_LEVELS.find(l => val.length <= l.max);
+      bar.style.width      = level.pct + '%';
+      bar.style.background = level.color;
+      lbl.style.color      = level.color;
+      lbl.textContent      = level.label;
+
+      const override = COMPLEXITY_TIPS.find(([re]) => re.test(val));
+      tip.textContent = override ? override[1] : level.tip;
+    });
   </script>
 </body>
 </html>

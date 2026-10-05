@@ -847,6 +847,13 @@ footer {
 
   /* Projects */
   .projects-grid { grid-template-columns: 1fr; padding: 0 20px; }
+  .project-card {
+    aspect-ratio: auto;
+    min-height: 380px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
   .section-projects .section-col { padding: 0 20px; }
 
   /* Footer */
